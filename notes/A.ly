@@ -112,6 +112,64 @@ GloriaAltoLyrics = \lyricmode {
 	tis. %10 finis
 }
 
+GratiasAltoNotes = {
+	\relative c' {
+		\clef treble
+		\key e \minor \time 3/4 \autoBeamOff \tempoGratias
+			\set Score.currentBarNumber = #46
+		\mvTr e4.\pE^\solo h8 h4
+		g'4. fis8 e4
+		dis( cis) h
+		R2.*2 %50
+		r4 fis' fis
+		\once \tieDashed g2.~
+		g8[ fis g e a g]
+		fis2. g8[ a g a] h4
+		r a g %55
+		fis4. fis8 g4(
+		a) g( fis)
+		g r r
+		R2.*7 %66
+		r4 fis h,
+		g'16[ fis e fis] g8[ e h' d,!]
+		c16[ h c d] c8[ e fis g]
+		a16[ g a h] a8[ d, a' c,] %70
+		h16[ a h c] h8[ g' fis g]
+		e16[ dis e fis] e[ g fis e] fis[ g fis e]
+		dis4. dis8 e4
+		e8([ fis] g4 fis)
+		e2 r4 %75
+		R2.*3
+		R2.\fermataMarkup \bar "||" %79 finis
+	}
+}
+
+GratiasAltoLyrics = \lyricmode {
+	Gra -- ti -- as %46
+	a -- gi -- mus
+	ti -- bi
+
+	pro -- pter %51
+	ma --
+
+	_
+	_ gnam, %55
+	ma -- gnam
+	glo -- ri -- am __
+	tu --
+	am,
+
+	ma -- gnam %67
+	glo -- _
+	_ _
+	_ _ %70
+	_ _
+	_ _ _
+	_ ri -- am
+	tu --
+	am. %75 finis
+}
+
 % AltoNotes = {
 % 	\relative c' {
 % 		\clef treble

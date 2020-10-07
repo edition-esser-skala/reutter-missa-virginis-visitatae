@@ -199,6 +199,85 @@ LaudamusBassFigures = \figuremode {
 	<[6]>4 <4>8 <_+> r2 %45 finis
 }
 
+GratiasOrgano = {
+	\relative c {
+		\clef bass
+		\key e \minor \time 3/4 \tempoGratias
+			\set Score.currentBarNumber = #46
+		\mvTr e2\pE-\solo e4
+		e4. fis8 g a
+		h2 h,4
+		e2\fE e4
+		e4. fis8 g a %50
+		h2 h,4\pE
+		e2 e4
+		a,2 a4
+		d2 d4
+		g,2 g4 %55
+		c2 cis4
+		d c h
+		c d d,
+		g2.\fE
+		g4. a8 h c %60
+		d2 fis8 e
+		dis2 dis4
+		e2 d4
+		cis2 cis4
+		d2 h4 %65
+		c2 a4
+		h2 dis4\pE
+		e2 gis4
+		a2 g4
+		fis2 fis4 %70
+		g2 h,4
+		c2 a4
+		h8 fis' h a g4
+		a h h,
+		e2\fE e4 %75
+		a,2 a4
+		h8 fis' h a g fis
+		e ais, h2
+		e2.\fermata \bar "||" %79 finis
+	}
+}
+
+GratiasBassFigures = \figuremode {
+	r2. %46
+	r
+	<_+>
+	r
+	r %50
+	<_+>
+	r
+	<7>
+	q
+	r %55
+	<6>2 <5>4
+	<_+> \bo <[\t]> <6>
+	q <6 4> \bc <[5] _+>
+	r2.
+	r %60
+	<6 4>4 <[5] 3>2
+	<6>2 <5>4
+	r2.
+	<6>2 <5>4
+	r2 <6>4 %65
+	r2 <6>8 <5>
+	<_+>2 <[6 5]>4
+	r2 q4
+	r2.
+	\bo <[6]>2 \bc <[5]>4 %70
+	r2 <[6]>4
+	r2 <6>4
+	<_+>4. \bassFigureExtendersOn q8 \bassFigureExtendersOff <6>4
+	r \bo <[6] 4> \bc <[5] _+>
+	r2. %75
+	r2 <6>8 <5>
+	<_+>2.
+	r8 <7 [_+]> \bo <[6] 4>4 \bc <[5] _+>
+	r2. %79 finis
+}
+
 Organo = {
 	\relative c {
 		\clef bass

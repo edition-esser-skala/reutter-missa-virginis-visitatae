@@ -160,45 +160,90 @@
 	% 		\midi { \tempo 4 = 90 }
 	% 	}
 	% }
+	% \bookpart {
+	% 	\header {
+	% 		subtitle = "L A U D A M U S   T E"
+	% 	}
+	% 	\paper { systems-per-page = #2 }
+	% 	\tocSubsection "2.2" "Laudamus te"
+	% 	\score {
+	% 		<<
+	% 			\new StaffGroup <<
+	% 				\new GrandStaff  <<
+	% 					\set GrandStaff.instrumentName = "vl"
+	% 					\new Staff {
+	% 						\set Staff.instrumentName = "1"
+	% 						\LaudamusViolinoI
+	% 					}
+	% 					\new Staff {
+	% 						\set Staff.instrumentName = "2"
+	% 						\LaudamusViolinoII
+	% 					}
+	% 				>>
+	% 			>>
+	% 			\new ChoirStaff <<
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = "S"
+	% 					\new Voice = "Soprano" { \dynamicUp \LaudamusSopranoNotes }
+	% 				}
+	% 				\new Lyrics \lyricsto Soprano \LaudamusSopranoLyrics
+	% 			>>
+	% 			\new StaffGroup <<
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = \markup { \center-column { "org" "b" } }
+	% 					% \transpose c c,
+	% 					\LaudamusOrgano
+	% 				}
+	% 			>>
+	% 			\new FiguredBass { \LaudamusBassFigures }
+	% 		>>
+	% 		\layout { }
+	% 		\midi { \tempo 4 = 80 }
+	% 	}
+	% }
 	\bookpart {
 		\header {
-			subtitle = "L A U D A M U S   T E"
+			subtitle = "G R A T I A S   A G I M U S   T I B I"
 		}
 		\paper { systems-per-page = #2 }
-		% \tocSubsection "2.1" "Laudamus te"
+		\tocSubsection "2.3" "Gratias agimus tibi"
 		\score {
 			<<
+				\new Staff \with { \smallStaffDistance } {
+					\set Staff.instrumentName = "trb"
+					\GratiasTrombone
+				}
 				\new StaffGroup <<
-					\new GrandStaff  <<
+					\new GrandStaff \with { \smallGroupDistance } <<
 						\set GrandStaff.instrumentName = "vl"
 						\new Staff {
 							\set Staff.instrumentName = "1"
-							\LaudamusViolinoI
+							\GratiasViolinoI
 						}
 						\new Staff {
 							\set Staff.instrumentName = "2"
-							\LaudamusViolinoII
+							\GratiasViolinoII
 						}
 					>>
 				>>
-				\new ChoirStaff <<
+				\new ChoirStaff \with { \smallGroupDistance } <<
 					\new Staff {
-						\set Staff.instrumentName = "S"
-						\new Voice = "Soprano" { \dynamicUp \LaudamusSopranoNotes }
+						\set Staff.instrumentName = "A"
+						\new Voice = "Alto" { \dynamicUp \GratiasAltoNotes }
 					}
-					\new Lyrics \lyricsto Soprano \LaudamusSopranoLyrics
+					\new Lyrics \lyricsto Alto \GratiasAltoLyrics
 				>>
 				\new StaffGroup <<
 					\new Staff {
 						\set Staff.instrumentName = \markup { \center-column { "org" "b" } }
 						% \transpose c c,
-						\LaudamusOrgano
+						\GratiasOrgano
 					}
 				>>
-				\new FiguredBass { \LaudamusBassFigures }
+				\new FiguredBass { \GratiasBassFigures }
 			>>
 			\layout { }
-			\midi { \tempo 4 = 80 }
+			\midi { \tempo 4 = 120 }
 		}
 	}
 }

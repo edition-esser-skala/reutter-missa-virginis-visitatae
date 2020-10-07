@@ -100,3 +100,25 @@ LaudamusViolinoII = {
 		e gis a8 h, gis' a a, r4\fermata \bar "||" %45 finis
 	}
 }
+
+GratiasViolinoII = {
+	\relative c' {
+		\clef treble
+		\key e \minor \time 3/4 \tempoGratias
+			\set Score.currentBarNumber = #46
+		R2.*3 %48
+		g'4.\fE g8 g4
+		h a g %50
+		fis2 r4
+		R2.*7 %58
+		h4.\fE h8 h4
+		d c h %60
+		h a r
+		R2.*13 %74
+		r4 g\fE g %75
+		a2 a8 g
+		fis2.
+		g4 g fis
+		e2.\fermata \bar "||"
+	}
+}
