@@ -129,43 +129,74 @@ LaudamusOrgano = {
 		\clef bass
 		\key a \minor \time 4/4 \tempoLaudamus
 			\set Score.currentBarNumber = #11
-		\mvTr a4.\fE-\solo h8 c  c a
+		\mvTr a4.\fE-\solo h8 c h c a
 		gis4 r8 gis a a'16 h c8 a
 		d c h4 c8 c,16 d e8 c
 		f e d c f e16 f g8 g,
-		c c16 d e8 c r h'16 a h8 gis
+		c c16 d e8 c r h'16 a h8 gis %15
 		r h16 a h8 gis a a16 h c8 gis
 		a h c gis a h c gis
 		a h c d e a, e e,
-		a'4. h8 c c,16 d e8 e,
-		a4. h8 c a r4
+		a'4. h8\pE c c,16 d e8 e,
+		a4. h8 c a r4 %20
 		R1*2
-		r2 c4. d8
+		r2 c4.\fE d8
 		e8. d16 e8 c h4. h8
-		c c16 d e8 c f e d c
+		c c16 d e8 c f e d c %25
 		g' c, g' g, c4 r
 		R1*3
-		r8 gis'16 fis e4 r8 h'16 a h8 e,
-		r h'16 a h8 gis a a16 h c8 a
+		r8 gis'16\fE fis e4 r8 h'16 a h8 e, %30
+		r h'16 a h8 gis a a16\pE h c8 a
 		e4. e,8 a4. a'8
-		g4. g,8 c4. h8
+		g4. g,8 c4. h8\fE
 		c8. d16 e8 h c8. d16 e8 h
-		c d e d d4. h8
+		c d e c d4.\pE h8 %35
 		c4. a8 h4. gis'8
-		a d, e e, a4. h8
+		a d, e e, a4.\fE h8
 		c h c a gis4 r8 gis
 		a a'16 h c8 a d c h4
-		c8 c,16 d e8 c f e d c
+		c8 c,16 d e8 c f e d c %40
 		f e16 f g8 g, c c16 d e8 c
 		r h'16 a h8 gis r h16 a h8 gis
 		a a16 h c8 gis a8. h16 c8 gis
 		a h c gis a h c d
-		c a e' e, a,2\fermata \bar "||"
+		c a e' e, a,2\fermata \bar "||" %45 finis
 	}
 }
 
-BassFigures = \figuremode {
-
+LaudamusBassFigures = \figuremode {
+	r4. \bo <[6\\]>8 <6>2 %11
+	q4. q q4
+	r8 q <6!> <5> r4 <6>
+	r8 \bc <[6]> <6>4 q8 <[6]>4.
+	r4 <[6]> r8 <3>4 <6>8 %15
+	r4. <6>8 r4 \bo <[6]>8 q
+	r <7> <6> q r <7> <6> q
+	r <6\\> \bc <[6]>4 <_+> <4>8 <_+>
+	r4. <6\\>8 <[6]>4 <4>8 <_+>
+	r4. <6\\>8 <6>2 %20
+	r1*2
+	r2.. <[6]>8
+	<6>2 \bo <[6]>4. \bc <[5]>8
+	r4 \bo <[6]> r8 \bc q <6>4 %25
+	<7> <4>8 <3> r2
+	r1*3
+	r8 \bo <[6]> \bc <[_+]>4. <3>4 <7 _+>8 %30
+	r4. <6>8 r4 <[6]>
+	<4>8 <_+>4 <7 _+>8 \bo <9 [4]> \bc <8 [3]>4.
+	<6 4>8 <5 3>2. <6>8
+	r4 \bo <[6]>8 <6> r4 q8 q
+	r q \bc <[6]>4 <9>8 <8>4 <[6 5]>8 %35
+	<9> <8>4 <[6 5]>8 <3>4. <[6 5]>8
+	r4 <_+> r4. <6\\>8
+	\bo <[6]>2 \bc q
+	r4 <[6]> <_!>8 \bo <[6]> <6!> \bc <[5]>
+	r4 \bo <[6]> r8 <6> \bc <[7]>4 %40
+	<6>8 <[6]> r2.
+	r4. <6>8 r4. q8
+	r4 \bo <[6]>8 <6> r4 <6>8 q
+	r <7> <6> q r <6\\> \bc <[6]> <6>
+	<[6]>4 <4>8 <_+> r2 %45 finis
 }
 
 Organo = {

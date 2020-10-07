@@ -57,3 +57,46 @@ GloriaViolinoII = {
 		e8 e16 e e8 e e2\fermata \bar "||" %10 finis
 	}
 }
+
+LaudamusViolinoII = {
+	\relative c' {
+		\clef treble
+		\key a \minor \time 4/4 \tempoLaudamus
+			\set Score.currentBarNumber = #11
+		a''8\fE e16 d c h a gis a8 e r16 a gis a
+		h e, gis h e gis h d, c h a8 r e'
+		f16 a e a d, g d f e d c8 r g'
+		a16 c g c f, c' e, c' d, h c8 g h
+		c,4 r16 e' f e d c \once \tieDashed d8~ d16 gis h gis %15
+		d c d8~ d16 gis h d, c h a8 r16 h a h
+		\tuplet 3/2 8 { c h a } a'4 h,8 \tuplet 3/2 8 { c16 h a } a'4 h,8
+		\tuplet 3/2 8 { c16 h a d[ c h] e d c f[ e d] } e gis a8 h, gis'
+		a a, r4 a'8 e16 d c h a gis
+		a8 a, r4 r8 a'\p a gis %20
+		a a a g16 f e8 f g f16 e
+		d8 e f e16 d c4. d8
+		e f g g, c g''16\f f e d c h
+		c8 g r16 c h c d g, h d f h d f,
+		e d c8 r g' a16 c g c f, c' e, c' %25
+		h g c e, d8 h' \kneeBeam c8 c,,16\p d e8 f16 g
+		c,4 r r2
+		d4. h8 c d e c
+		g' h16 a g8 gis a h c a
+		e4 r8 e'\f d16 c d8~ d16 gis h gis %30
+		d c \once \tieDashed d8~ d16 gis h d, c h a8 r4
+		r8 h16\p c d8 d d c16 d e8 e
+		e d16 e f e f d e8. d16 c8 d\f
+		\tuplet 3/2 8 { e16 d c } \once \tieDashed c'8~ c d, \tuplet 3/2 8 { e16 d c } \once \tieDashed c'8~ c d,
+		e d c4 r2 %35
+		R1
+		r2 a'8\f e16 d c h a gis
+		a8 e r16 a gis a h e, gis h e gis h d,
+		c h a8 r e' f16 a e a d, g d f
+		e d c8 r g' a16 c g c f, c' e, c' %40
+		d, h c8 g h c,4 r16 e' f e
+		d c d8~ d16 gis h gis d c d8~ d16 gis h d,
+		c h a8 r h \tuplet 3/2 8 { c16 h a } a'4 h,8
+		\tuplet 3/2 8 { c16 h a } a'4 h,8 \tuplet 3/2 8 { c16 h a d[ c h] e d c f[ e d] }
+		e gis a8 h, gis' a a, r4\fermata \bar "||" %45 finis
+	}
+}

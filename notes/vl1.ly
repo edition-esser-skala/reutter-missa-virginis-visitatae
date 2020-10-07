@@ -58,6 +58,49 @@ GloriaViolinoI = {
 	}
 }
 
+LaudamusViolinoI = {
+	\relative c' {
+		\clef treble
+		\key a \minor \time 4/4 \tempoLaudamus
+			\set Score.currentBarNumber = #11
+		a''8\fE e16 d c h a gis a8 e r16 a gis a
+		h e, gis h e gis h d, c h a8 r e'
+		f16 a e a d, g d f e d c8 r g'
+		a16 c g c f, c' e, c' d, h c8 g h
+		c,4 r16 e' f e d c \once \tieDashed d8~ d16 gis h gis %15
+		d c d8~ d16 gis h d, c h a8 r16 h a h
+		\tuplet 3/2 8 { c h a } a'4 h,8 \tuplet 3/2 8 { c16 h a } a'4 h,8
+		\tuplet 3/2 8 { c16 h a d[ c h] e d c f[ e d] } e gis a8 h, gis'
+		a a, r4 r2
+		r r8 c16\p d h4 %20
+		a8 e' e f g f16 e d8 e
+		f e16 d c8 d e16 f e f \once \tieDashed g4~
+		g8 f16 e d8. c16 c8 g'16\f f e d c h
+		c8 g r16 c h c d g, h d f h d f,
+		e d c8 r g' a16 c g c f, c' e, c' %25
+		h g c e, d8 h' c8 h16\p a g8 f
+		e g f8. g16 e4 r
+		f4. g16 f e4. f16 e
+		d4 h8 h h a16 gis a8 h16 a
+		gis4 r8 e'\f d16 c d8~ d16 gis h gis %30
+		d c \once \tieDashed d8~ d16 gis h d, c h a8 r4
+		r8 h16\p c d8 d d c16 d e8 e
+		e d16 e f e f d e8. d16 c8 d\f
+		\tuplet 3/2 8 { e16 d c } \once \tieDashed c'8~ c d, \tuplet 3/2 8 { e16 d c } \once \tieDashed c'8~ c d,
+		e d c4 r2 %35
+		R1
+		r2 a'8\f e16 d c h a gis
+		a8 e r16 a gis a h e, gis h e gis h d,
+		c h a8 r e' f16 a e a d, g d f
+		e d c8 r g' a16 c g c f, c' e, c' %40
+		d, h c8 g h c,4 r16 e' f e
+		d c d8~ d16 gis h gis d c d8~ d16 gis h d,
+		c h a8 r h \tuplet 3/2 8 { c16 h a } a'4 h,8
+		\tuplet 3/2 8 { c16 h a } a'4 h,8 \tuplet 3/2 8 { c16 h a d[ c h] e d c f[ e d] }
+		e gis a8 h, gis' a a, r4\fermata \bar "||" %45 finis
+	}
+}
+
 % ViolinoI = {
 % 	\relative c' {
 % 		\clef treble

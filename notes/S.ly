@@ -117,6 +117,56 @@ GloriaSopranoLyrics = \lyricmode {
 	tis. %10 finis
 }
 
+LaudamusSopranoNotes = {
+	\relative c' {
+		\clef treble
+		\key a \minor \time 4/4 \autoBeamOff \tempoLaudamus
+			\set Score.currentBarNumber = #11
+		R1*8 %18
+		r8 \mvTr e'16([\pE^\soloE d)] c([ h)] a([ gis)] a4 r
+		r8 e'16([ d)] c([ h)] a([ gis)] a8 e'16([ f)] d8.[ e16] %20
+		c8[ c c d] e[ d16 c] h8[ c]
+		d[ c16 h] a8[ h] c16[ d c d] e4~
+		e8[ d16 c] h8. c16 c4 r
+		R1*2 %25
+		r2 r8^\critnote g'16([ f)] e8 d
+		c e d8. d16 c4 r8 e~
+		e[ d16 c] d4. c16([ h)] c8 d16 c
+		h4 e8 d c4. d16([ c)]
+		h4 r r2 %30
+		r r8 a a a
+		a[ gis16 a] h8[ h] h[ a16 h] c8[ c]
+		c[ h16 c] d[ c d h] c8. c16 c4
+		R1
+		r4 r8 e f16([ e)] d([ f)] g,[ d' c d] %35
+		\tuplet 3/2 8 { e[ d c] c[ d e] } f,[ c' h c] \tuplet 3/2 8 { d[ c h] h[ c d] } e,[ h' a h]
+		\tuplet 3/2 8 { c[ h a] } f'[ a,] gis8. a16 a4 r
+		R1*7 %44
+		R1\fermataMarkup \bar "||" %45 finis
+	}
+}
+
+LaudamusSopranoLyrics = \lyricmode {
+	Lau -- da -- mus te, %19
+	lau -- da -- mus te, lau -- da -- %20
+	_ _ _
+	_ _ _ _
+	_ mus te.
+
+	Lau -- da -- mus %26
+	te, lau -- da -- mus te, be --
+	_ ne -- di -- ci -- mus
+	te, ad -- o -- ra -- mus
+	te, %30
+	glo -- ri -- fi --
+	ca -- _ _ _
+	_ _ _ mus te,
+
+	glo -- ri -- fi -- ca -- %35
+	_ _ _ _ _ _
+	_ _ _ mus te. %37 finis
+}
+
 % SopranoNotes = {
 % 	\relative c' {
 % 		\clef treble
