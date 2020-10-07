@@ -94,6 +94,135 @@ KyrieBassFigures = \figuremode {
 	r4 \bo <[6 4]>8 \bc <[5 3]> r2 %34 finis
 }
 
+GloriaOrgano = {
+	\relative c {
+		\clef bass
+		\key c \major \time 4/4 \tempoGloria
+		\mvTr c4\fE-\tuttiE c c16 d32 e f g a h c16 c, e g
+		c4 c, c16 d32 e f g a h c16 c, e g
+		c4 c, c8 c16 d e8 c
+		g' g, r h16 g c8 g c4
+		g r r2 %5
+		g'4 r8 g f d r4
+		r8 h4 c8 g2
+		r f'8 f f f
+		e4. d16 c g2
+		c4 c8 c c2\fermata \bar "||" %10 finis
+	}
+}
+
+GloriaBassFigures = \figuremode {
+	r1
+	r
+	r
+	\bo <[6] 4>8 <5 3>4 \bc <[6]>8 <9>4 <8>
+	r1 %5
+	<6 4+ 2>4. <\t \t \t>8 <6>2
+	r8 <[6]>4. <6 4>4 <5 3>
+	r2 <6 4 2>
+	<6> <6 4>4 <5 3>
+	r1 %10 finis
+}
+
+LaudamusOrgano = {
+	\relative c {
+		\clef bass
+		\key a \minor \time 4/4 \tempoLaudamus
+			\set Score.currentBarNumber = #11
+		\mvTr a4.\fE-\solo h8 c  c a
+		gis4 r8 gis a a'16 h c8 a
+		d c h4 c8 c,16 d e8 c
+		f e d c f e16 f g8 g,
+		c c16 d e8 c r h'16 a h8 gis
+		r h16 a h8 gis a a16 h c8 gis
+		a h c gis a h c gis
+		a h c d e a, e e,
+		a'4. h8 c c,16 d e8 e,
+		a4. h8 c a r4
+		R1*2
+		r2 c4. d8
+		e8. d16 e8 c h4. h8
+		c c16 d e8 c f e d c
+		g' c, g' g, c4 r
+		R1*3
+		r8 gis'16 fis e4 r8 h'16 a h8 e,
+		r h'16 a h8 gis a a16 h c8 a
+		e4. e,8 a4. a'8
+		g4. g,8 c4. h8
+		c8. d16 e8 h c8. d16 e8 h
+		c d e d d4. h8
+		c4. a8 h4. gis'8
+		a d, e e, a4. h8
+		c h c a gis4 r8 gis
+		a a'16 h c8 a d c h4
+		c8 c,16 d e8 c f e d c
+		f e16 f g8 g, c c16 d e8 c
+		r h'16 a h8 gis r h16 a h8 gis
+		a a16 h c8 gis a8. h16 c8 gis
+		a h c gis a h c d
+		c a e' e, a,2\fermata \bar "||"
+	}
+}
+
+BassFigures = \figuremode {
+
+}
+
+Organo = {
+	\relative c {
+		\clef bass
+
+	}
+}
+
+BassFigures = \figuremode {
+
+}
+
+Organo = {
+	\relative c {
+		\clef bass
+
+	}
+}
+
+BassFigures = \figuremode {
+
+}
+
+Organo = {
+	\relative c {
+		\clef bass
+
+	}
+}
+
+BassFigures = \figuremode {
+
+}
+
+Organo = {
+	\relative c {
+		\clef bass
+
+	}
+}
+
+BassFigures = \figuremode {
+
+}
+
+Organo = {
+	\relative c {
+		\clef bass
+
+	}
+}
+
+BassFigures = \figuremode {
+
+}
+
 % Organo = {
 % 	\relative c {
 % 		\clef bass

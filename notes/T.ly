@@ -58,6 +58,36 @@ KyrieTenoreLyrics = \lyricmode {
 	e -- lei -- son. %34 finis
 }
 
+GloriaTenoreNotes = {
+	\relative c' {
+		\clef "treble_8"
+		\key c \major \time 4/4 \autoBeamOff \tempoGloria
+		\mvTr e8.\fE^\tuttiE e16 e4 r2
+		e8. e16 e4 r2
+		e8. e16 e4 e8 c16 c c8 c
+		c h r d16 d c8 h c4
+		h r r2 %5
+		e4 r8 e a, a r4
+		r8 d4 g,8 g8. g16 g4
+		r2 h8 h h h
+		c4 g2 g4
+		c2 r\fermata \bar "||" %10 finis
+	}
+}
+
+GloriaTenoreLyrics = \lyricmode {
+	Glo -- ri -- a,
+	glo -- ri -- a,
+	glo -- ri -- a, glo -- ri -- a in ex --
+	cel -- sis,  in ex -- cel -- sis De --
+	o. %5
+	Et in ter -- ra
+	pax ho -- mi -- ni -- bus
+	bo -- nae vo -- lun -- ta --
+	_ _
+	tis. %10 finis
+}
+
 % TenoreNotes = {
 % 	\relative c' {
 % 		\clef "treble_8"

@@ -87,6 +87,36 @@ KyrieSopranoLyrics = \lyricmode {
 	e -- lei -- son. %34 finis
 }
 
+GloriaSopranoNotes = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \autoBeamOff \tempoGloria
+		\mvTr c'8.\fE^\tuttiE c16 c4 r2
+		e8. e16 e4 r2
+		g8. g16 g4 e8 e16 e e8 e
+		e d r d16 d e8 d e4
+		d r r2 %5
+		cis4 r8 cis d d r4
+		r8 d4 c8 c8. h16 h4
+		d8 d d d d2
+		\once \tieDashed c~ c4 h
+		c2 r\fermata \bar "||" %10 finis
+	}
+}
+
+GloriaSopranoLyrics = \lyricmode {
+	Glo -- ri -- a,
+	glo -- ri -- a,
+	glo -- ri -- a, glo -- ri -- a in ex --
+	cel -- sis,  in ex -- cel -- sis De --
+	o. %5
+	Et in ter -- ra
+	pax ho -- mi -- ni -- bus
+	bo -- nae vo -- lun -- ta --
+	_ _
+	tis. %10 finis
+}
+
 % SopranoNotes = {
 % 	\relative c' {
 % 		\clef treble

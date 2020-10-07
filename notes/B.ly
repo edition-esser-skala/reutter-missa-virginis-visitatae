@@ -43,6 +43,36 @@ KyrieBassoLyrics = \lyricmode {
 	e -- lei -- son. %34 finis
 }
 
+GloriaBassoNotes = {
+	\relative c {
+		\clef bass
+		\key c \major \time 4/4 \autoBeamOff \tempoGloria
+		\mvTr c8.\fE^\tuttiE c16 c4 r2
+		c'8. c16 c4 r2
+		c8. c16 c4 c,8 c16 d e8 c
+		g' g, r h16 g c8 g c4
+		g r r2
+		g'4 r8 g f d r4
+		r8 h4 c8 g8. g16 g4
+		r2 f'8 f f f
+		e4. d16[ c] g2
+		c r\fermata \bar "||"
+	}
+}
+
+GloriaBassoLyrics = \lyricmode {
+	Glo -- ri -- a,
+	glo -- ri -- a,
+	glo -- ri -- a, glo -- ri -- a in ex --
+	cel -- sis,  in ex -- cel -- sis De --
+	o. %5
+	Et in ter -- ra
+	pax ho -- mi -- ni -- bus
+	bo -- nae vo -- lun -- ta --
+	_ _
+	tis. %10 finis
+}
+
 % BassoNotes = {
 % 	\relative c {
 % 		\clef bass

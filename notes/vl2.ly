@@ -40,3 +40,20 @@ KyrieViolinoII = {
 		h8 e e d c4 r\fermata \bar "|."
 	}
 }
+
+GloriaViolinoII = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \tempoGloria
+		g''8.\fE g16 g4 r2
+		g8. g16 g4 r2
+		g8. g16 g4 g8 g16 g g8 g
+		g g r g16 h g8 h g4
+		g r h16 gis f d h gis f d %5
+		cis'32 a h cis d e f g a16 e cis a d e32 f g a h cis d16 a f d
+		d' f, d f h d e, c' h g d h g d h g
+		h'8 g h g g'16 d h' g d' d, f d
+		e g a h c g h c g h c e, d c' h d,
+		e8 e16 e e8 e e2\fermata \bar "||" %10 finis
+	}
+}

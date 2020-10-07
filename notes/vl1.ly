@@ -41,6 +41,23 @@ KyrieViolinoI = {
 	}
 }
 
+GloriaViolinoI = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \tempoGloria
+		c''8.\fE c16 c4 r2
+		c8. c16 c4 r2
+		c8. c16 c4 c c8 c
+		g d' r d16 d g,8 d' c4
+		h r h16 gis f d h gis f d %5
+		cis'32 a h cis d e f g a16 e cis a d e32 f g a h cis d16 a f d
+		d' f, d f h d e, c' h g d h g d h g
+		d'' g h, g' d g h, g' d g h g d' d, f d
+		e g a h c g h c g h c e, d c' h d,
+		c'8 c c c c2\fermata \bar "||" %10 finis
+	}
+}
+
 % ViolinoI = {
 % 	\relative c' {
 % 		\clef treble

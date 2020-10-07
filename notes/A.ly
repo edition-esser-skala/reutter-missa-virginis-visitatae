@@ -82,6 +82,36 @@ KyrieAltoLyrics = \lyricmode {
 	e -- lei -- son. %34 finis
 }
 
+GloriaAltoNotes = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \autoBeamOff \tempoGloria
+		\mvTr g'8.\fE^\tuttiE g16 g4 r2
+		g8. g16 g4 r2
+		g8. g16 g4 g8 g16 g g8 g
+		g g r g16 g g8 g g4
+		g r r2 %5
+		a8 r r a a a r4
+		r8 g4 e8 e8. d16 d4
+		r2 g8 g g g
+		g4. f16[ e] e4 d
+		c2 r\fermata \bar "||" %10 finis
+	}
+}
+
+GloriaAltoLyrics = \lyricmode {
+	Glo -- ri -- a,
+	glo -- ri -- a,
+	glo -- ri -- a, glo -- ri -- a in ex --
+	cel -- sis,  in ex -- cel -- sis De --
+	o. %5
+	Et in ter -- ra
+	pax ho -- mi -- ni -- bus
+	bo -- nae vo -- lun --
+	ta -- _ _ _
+	tis. %10 finis
+}
+
 % AltoNotes = {
 % 	\relative c' {
 % 		\clef treble

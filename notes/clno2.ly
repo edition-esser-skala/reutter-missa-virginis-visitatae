@@ -29,3 +29,20 @@ KyrieClarinoII = {
 		g8 c g8. g16 g4_\critnote r\fermata \bar "|." %34 finis
 	}
 }
+
+GloriaClarinoII = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \tempoGloria
+		e'8.\fE e16 e4 r2
+		c8. c16 c4 r2
+		g8. g16 g4 e'8 e16 e g,8[ c]
+		c g r d'16 d d8 d e4
+		d r r2 %5
+		R1
+		r8 d16 d g8[ c,] d8. d16 d4
+		R1
+		g,4. c8 g4. g8
+		g4. g16 g g2\fermata \bar "||" %10 finis
+	}
+}
