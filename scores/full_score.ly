@@ -246,62 +246,127 @@
 	% 		\midi { \tempo 4 = 120 }
 	% 	}
 	% }
+	% \bookpart {
+	% 	\header {
+	% 		subtitle = "D O M I N E   D E U S"
+	% 	}
+	% 	\tocSubsection "2.4" "Domine Deus"
+	% 	\score {
+	% 		<<
+	% 			\new StaffGroup <<
+	% 				\new GrandStaff  <<
+	% 					\set GrandStaff.instrumentName = "vl"
+	% 					\new Staff {
+	% 						\set Staff.instrumentName = "1"
+	% 						\DomineViolinoI
+	% 					}
+	% 					\new Staff {
+	% 						\set Staff.instrumentName = "2"
+	% 						\DomineViolinoII
+	% 					}
+	% 				>>
+	% 			>>
+	% 			\new ChoirStaff <<
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = "S"
+	% 					\new Voice = "Soprano" { \dynamicUp \DomineSopranoNotes }
+	% 				}
+	% 				\new Lyrics \lyricsto Soprano \DomineSopranoLyrics
+	%
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = "A"
+	% 					\new Voice = "Alto" { \dynamicUp \DomineAltoNotes }
+	% 				}
+	% 				\new Lyrics \lyricsto Alto \DomineAltoLyrics
+	%
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = "T"
+	% 					\new Voice = "Tenore" { \dynamicUp \DomineTenoreNotes }
+	% 				}
+	% 				\new Lyrics \lyricsto Tenore \DomineTenoreLyrics
+	%
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = "B"
+	% 					\new Voice = "Basso" { \dynamicUp \DomineBassoNotes }
+	% 				}
+	% 				\new Lyrics \lyricsto Basso \DomineBassoLyrics
+	% 			>>
+	% 			\new StaffGroup <<
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = \markup { \center-column { "org" "b" } }
+	% 					% \transpose c c,
+	% 					\DomineOrgano
+	% 				}
+	% 			>>
+	% 			\new FiguredBass { \DomineBassFigures }
+	% 		>>
+	% 		\layout { }
+	% 		\midi { \tempo 4 = 90 }
+	% 	}
+	% }
 	\bookpart {
 		\header {
-			subtitle = "D O M I N E   D E U S"
+			subtitle = "Q U I   T O L L I S"
 		}
-		% \tocSubsection "2.4" "Domine Deus"
+		% \tocSubsection "2.5" "Qui tollis"
 		\score {
 			<<
+				\new StaffGroup  <<
+					\new Staff <<
+						\set Staff.instrumentName = \markup \center-column { "clno" "1, 2" }
+						\set Staff.soloText = \markup \remark \medium "clno 1"
+						\partcombine \QuiTollisClarinoI \QuiTollisClarinoII
+					>>
+				>>
 				\new StaffGroup <<
 					\new GrandStaff  <<
 						\set GrandStaff.instrumentName = "vl"
 						\new Staff {
 							\set Staff.instrumentName = "1"
-							\DomineViolinoI
+							\QuiTollisViolinoI
 						}
 						\new Staff {
 							\set Staff.instrumentName = "2"
-							\DomineViolinoII
+							\QuiTollisViolinoII
 						}
 					>>
 				>>
 				\new ChoirStaff <<
 					\new Staff {
 						\set Staff.instrumentName = "S"
-						\new Voice = "Soprano" { \dynamicUp \DomineSopranoNotes }
+						\new Voice = "Soprano" { \dynamicUp \QuiTollisSopranoNotes }
 					}
-					\new Lyrics \lyricsto Soprano \DomineSopranoLyrics
+					\new Lyrics \lyricsto Soprano \QuiTollisSopranoLyrics
 
 					\new Staff {
 						\set Staff.instrumentName = "A"
-						\new Voice = "Alto" { \dynamicUp \DomineAltoNotes }
+						\new Voice = "Alto" { \dynamicUp \QuiTollisAltoNotes }
 					}
-					\new Lyrics \lyricsto Alto \DomineAltoLyrics
+					\new Lyrics \lyricsto Alto \QuiTollisAltoLyrics
 
 					\new Staff {
 						\set Staff.instrumentName = "T"
-						\new Voice = "Tenore" { \dynamicUp \DomineTenoreNotes }
+						\new Voice = "Tenore" { \dynamicUp \QuiTollisTenoreNotes }
 					}
-					\new Lyrics \lyricsto Tenore \DomineTenoreLyrics
+					\new Lyrics \lyricsto Tenore \QuiTollisTenoreLyrics
 
 					\new Staff {
 						\set Staff.instrumentName = "B"
-						\new Voice = "Basso" { \dynamicUp \DomineBassoNotes }
+						\new Voice = "Basso" { \dynamicUp \QuiTollisBassoNotes }
 					}
-					\new Lyrics \lyricsto Basso \DomineBassoLyrics
+					\new Lyrics \lyricsto Basso \QuiTollisBassoLyrics
 				>>
 				\new StaffGroup <<
 					\new Staff {
 						\set Staff.instrumentName = \markup { \center-column { "org" "b" } }
-						% \transpose c c,
-						\DomineOrgano
+						\transpose c c,
+						\QuiTollisOrgano
 					}
 				>>
-				\new FiguredBass { \DomineBassFigures }
+				\new FiguredBass { \QuiTollisBassFigures }
 			>>
-			\layout { }
-			\midi { \tempo 4 = 90 }
+			% \layout { }
+			\midi { \tempo 4 = 60 }
 		}
 	}
 }

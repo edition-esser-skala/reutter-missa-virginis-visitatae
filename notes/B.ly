@@ -101,6 +101,53 @@ DomineBassoLyrics = \lyricmode {
 	_ ter o -- mni -- po -- tens. %92 finis
 }
 
+QuiTollisBassoNotes = {
+	\relative c {
+		\clef bass
+		\key c \major \time 4/4 \autoBeamOff \tempoQuiTollis
+			\set Score.currentBarNumber = #111
+		\mvTr c2\fE^\tuttiE r4 b
+		a a r g'
+		fis eis fis fis
+		r e dis dis
+		dis2 gis, %115
+		R1*2
+		r2 r4 a'
+		dis, dis r d
+		d d c c %120
+		r a8([ g!)] fis4 fis
+		g g r2
+		R1*5 %127
+		r4 g c c8 c
+		g4 g r2
+		r4 g' g8. g16 fis4 %130
+		g g r2
+		g,4. g8 g4 c
+		g2 c\fermata \bar "||" %133 finis
+	}
+}
+
+QuiTollisBassoLyrics = \lyricmode {
+	Qui, qui %111
+	tol -- lis pec --
+	ca -- ta mun -- di,
+	pec -- ca -- ta
+	mun -- di. %115
+
+	Qui %118
+	tol -- lis pec --
+	ca -- ta mun -- di, %120
+	pec -- ca -- ta
+	mun -- di.
+
+	Qui se -- des, qui %128
+	se -- des
+	ad dex -- te -- ram %130
+	Pa -- tris:
+	Mi -- se -- re -- re
+	no -- bis. %133 finis
+}
+
 % BassoNotes = {
 % 	\relative c {
 % 		\clef bass

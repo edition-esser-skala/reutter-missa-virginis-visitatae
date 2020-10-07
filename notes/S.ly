@@ -195,6 +195,63 @@ DomineSopranoLyrics = \lyricmode {
 	tris. %108 finis
 }
 
+QuiTollisSopranoNotes = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \autoBeamOff \tempoQuiTollis
+			\set Score.currentBarNumber = #111
+		\mvTr c'2\fE^\tuttiE r4 c
+		cis cis r cis
+		cis d d cis
+		r cis cis h
+		ais2 gis %115
+		\mvTr e'4.\pE^\solo h8 ais4 ais
+		fis'4. a,8 gis4 a
+		a( gis) a \mvTr cis\fE^\tutti
+		c c r h8([ a)]
+		gis4 gis a a %120
+		c2 c4 c
+		h h r2
+		\mvTr a4.\pE^\solo a8 h4 c~
+		c8. h16 h4 d8 g, f' f
+		e4. e8 e[ a,] d4~ %125
+		d4. e16[ d] c4. d16[ c]
+		h4. c16[ h] h4 a
+		g \mvTr d'\fE^\tutti e e8 e
+		d8. d16 d4 r d
+		g8. g,16 g4 c2 %130
+		h4 g2 d'4
+		f2. e4
+		e( d) c2\fermata \bar "||" %133 finis
+	}
+}
+
+QuiTollisSopranoLyrics = \lyricmode {
+	Qui, qui %111
+	tol -- lis pec --
+	ca -- ta mun -- di,
+	pec -- ca -- ta
+	mun -- di: %115
+	Mi -- se -- re -- re,
+	mi -- se -- re -- re
+	no -- bis. Qui
+	tol -- lis pec --
+	ca -- ta mun -- di, %120
+	pec -- ca -- ta
+	mun -- di:
+	Su -- sci -- pe, su --
+	sci -- pe de -- pre -- ca -- ti --
+	o -- nem no -- _ %125
+	_ _ _
+	_ _ _ _
+	stram. Qui se -- des ad
+	dex -- te -- ram, ad
+	dex -- te -- ram Pa -- %130
+	tris: Mi -- se --
+	re -- re
+	no -- bis. %133 finis
+}
+
 % SopranoNotes = {
 % 	\relative c' {
 % 		\clef treble

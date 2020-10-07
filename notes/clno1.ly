@@ -46,3 +46,18 @@ GloriaClarinoI = {
 		c4. c16 c c2\fermata \bar "||" %10 finis
 	}
 }
+
+QuiTollisClarinoI = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \tempoQuiTollis
+			\set Score.currentBarNumber = #111
+		R1*17 %127
+		r4 g''\fE g g8 g
+		g4 g r d
+		g8. g,16 g4 r2 %130
+		R1
+		g'4 g8[ g] g4 f8 e
+		e4^\critnote d c2\fermata \bar "||" %133 finis
+	}
+}

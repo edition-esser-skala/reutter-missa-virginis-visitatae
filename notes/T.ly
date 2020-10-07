@@ -114,6 +114,53 @@ DomineTenoreLyrics = \lyricmode {
 	_ su Chri -- ste. %100 finis
 }
 
+QuiTollisTenoreNotes = {
+	\relative c' {
+		\clef "treble_8"
+		\key c \major \time 4/4 \autoBeamOff \tempoQuiTollis
+			\set Score.currentBarNumber = #111
+		\mvTr e2\fE^\tuttiE r4 e
+		e e r e
+		e d h ais
+		r ais ais gis
+		dis'2 dis %115
+		R1*2
+		r2 r4 e
+		fis fis r h,
+		h h a a %120
+		r e' d d
+		d d r2
+		R1*5 %127
+		r4 h c c8 c
+		h4 h r2
+		r4 d a d8 d %130
+		d4 d r2
+		d4. d8 d4 c
+		c( h) c2\fermata \bar "||" %133 finis
+	}
+}
+
+QuiTollisTenoreLyrics = \lyricmode {
+	Qui, qui %111
+	tol -- lis pec --
+	ca -- ta mun -- di,
+	pec -- ca -- ta
+	mun -- di. %115
+
+	Qui %118
+	tol -- lis pec --
+	ca -- ta mun -- di, %120
+	pec -- ca -- ta
+	mun -- di.
+
+	Qui se -- des, qui %128
+	se -- des
+	ad dex -- te -- ram %130
+	Pa -- tris:
+	Mi -- se -- re -- re
+	no -- bis. %133 finis
+}
+
 % TenoreNotes = {
 % 	\relative c' {
 % 		\clef "treble_8"

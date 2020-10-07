@@ -164,6 +164,33 @@ DomineViolinoI = {
 	}
 }
 
+QuiTollisViolinoI = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \tempoQuiTollis
+			\set Score.currentBarNumber = #111
+		c'2\fE r4 c
+		cis cis r cis
+		cis d2 cis4
+		r cis cis h
+		ais2 gis %115
+		gis8\p gis gis gis fis fis fis fis
+		fis fis fis fis e e a a
+		cis cis h h a4 cis\f
+		c c r h8 a
+		gis gis gis gis a a a a %120
+		c2 c4 c
+		h h r2
+		R1*5 %127
+		r4 d\fE e e8 e
+		d4 d r d
+		g8. g,16 g4 c2 %130
+		h4 g2 d'4
+		f2. e4
+		e d c2\fermata \bar "||" %133 finis
+	}
+}
+
 % ViolinoI = {
 % 	\relative c' {
 % 		\clef treble
