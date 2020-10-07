@@ -21,13 +21,13 @@
 			title = "K Y R I E"
 		}
 		\paper { indent = 3\cm }
-		\tocSection "1" "Kyrie"
+		% \tocSection "1" "Kyrie"
 		\score {
 			<<
-				\new StaffGroup <<
+				\new StaffGroup \with { \smallGroupDistance } <<
 					\new Staff <<
 						\set Staff.instrumentName = \markup \center-column { "Clarino I, II" "in C" }
-						\KyrieClarinoI \KyrieClarinoII
+						\partcombine \KyrieClarinoI \KyrieClarinoII
 					>>
 				>>
 				\new Staff {
@@ -88,7 +88,7 @@
 				\new FiguredBass { \KyrieBassFigures }
 			>>
 			\layout { }
-			\midi { \tempo 4 = 80 }
+			\midi { \tempo 4 = 70 }
 		}
 	}
 }

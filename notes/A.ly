@@ -19,11 +19,67 @@ KyrieAltoNotes = {
 	\relative c' {
 		\clef treble
 		\key c \major \time 4/4 \autoBeamOff \tempoKyrie
+		R1*3
+		\mvTr g'4\pE^\solo a h r8 h
+		a16[ g a h] a[ h a h] g[ fis g a] g[ h a g] %5
+		fis[ e] d8 g4 g8[ fis16 e] fis[ g a8]
+		\once \tieDashed h2~ h8[ a16 g] a4
+		g r8 h a16[ h g a] fis[ g a fis]
+		g[ a g a] h[ a g f] e8.[ f16] e8[ d]
+		c4 r r2 %10
+		R1*2
+		r2 r8 \mvTr g'\fE^\tuttiE g g
+		g([ fis16 g] a[ g] \tuplet 3/2 8 { a[ g fis)] } g8 g16([ f?)] e([ d e h)]
+		c8 e16([ f)] g8 f16([ e)] f2 %15
+		e8 g16([ a] h8[ a16 g)] a2
+		g8 g a4 d,8 g a8([ g16 f)]
+		e8 g \tuplet 3/2 8 { f16([ e f] g[ f g)] } e8 f f([ e)]
+		d8 r r4 r2
+		r r8 g g4 %20
+		g r r8 g g([ f)]
+		f([ e)] e([ f)] g2
+		g4 r r2
+		R1*3 %26
+		r2 c,
+		d e8 a16([ g)] f([ e d g)]
+		c,8 g' g g g([ fis16 g] a[ g] \tuplet 3/2 8 { a[ g fis)] }
+		g8 g e8.([ d16)] d8^\critnote d g([ f)] %30
+		e g g4 f8 d16([ e)] f([ e] \tuplet 3/2 8 { f[ e d)] }
+		c8 a'16([ g)] a([ g f e)] d8 g g([ g16 f)]
+		g8 g g4 g r
+		r8 g g4 g r\fermata \bar "|."
 	}
 }
 
 KyrieAltoLyrics = \lyricmode {
+	Ky -- ri -- e e -- %4
+	lei -- _ _ _ %5
+	_ son, e -- lei -- _
+	_ _
+	son, e -- lei -- _
+	_ _ _ _
+	son. %10
 
+	Chri -- ste e -- %13
+	lei -- son, e -- lei --
+	son, Chri -- ste e -- lei -- %15
+	son, e -- lei --
+	son, e -- lei -- son, e -- lei --
+	son, e -- lei -- son, e -- lei --
+	son,
+	e -- lei -- %20
+	son, e -- lei --
+	son, e -- lei --
+	son.
+
+	Ky -- %27
+	ri -- e e -- lei --
+	son, Chri -- ste e -- lei --
+	son, e -- lei -- son, e -- lei -- %30
+	son, e -- lei -- son, e -- lei --
+	son, e -- lei -- son, e -- lei --
+	son, e -- lei -- son,
+	e -- lei -- son. %34 finis
 }
 
 % AltoNotes = {
