@@ -170,6 +170,34 @@ GratiasAltoLyrics = \lyricmode {
 	am. %75 finis
 }
 
+DomineAltoNotes = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \autoBeamOff \tempoDomine
+			\set Score.currentBarNumber = #80
+		R1*22 %101
+		\mvTr e4~\pE^\solo e16[ d e f] e4~ e16[ d e f]
+		e4. a16 a a8([ gis)] gis4
+		e4. a16([ g)] f4. g16([ f)]
+		e4. f16 e d[ c d e] f[ e f d] %105
+		e[ d e f] g4~ g16[ f g a] g4~
+		g16[ f g a] \once \tieDashed g4~ g8[ f16 e] e8[ d]
+		c4 r r2
+		R1
+		R\fermataMarkup \bar "||" %110 finis
+	}
+}
+
+DomineAltoLyrics = \lyricmode {
+	Do -- _ %102
+	_ mi -- ne De -- us,
+	A -- gnus De -- i,
+	Fi -- li -- us Pa -- _ %105
+	_ _ _
+	_ _
+	tris. %108 finis
+}
+
 % AltoNotes = {
 % 	\relative c' {
 % 		\clef treble

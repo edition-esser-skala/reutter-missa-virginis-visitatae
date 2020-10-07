@@ -201,49 +201,107 @@
 	% 		\midi { \tempo 4 = 80 }
 	% 	}
 	% }
+	% \bookpart {
+	% 	\header {
+	% 		subtitle = "G R A T I A S   A G I M U S   T I B I"
+	% 	}
+	% 	\paper { systems-per-page = #2 }
+	% 	\tocSubsection "2.3" "Gratias agimus tibi"
+	% 	\score {
+	% 		<<
+	% 			\new Staff \with { \smallStaffDistance } {
+	% 				\set Staff.instrumentName = "trb"
+	% 				\GratiasTrombone
+	% 			}
+	% 			\new StaffGroup <<
+	% 				\new GrandStaff \with { \smallGroupDistance } <<
+	% 					\set GrandStaff.instrumentName = "vl"
+	% 					\new Staff {
+	% 						\set Staff.instrumentName = "1"
+	% 						\GratiasViolinoI
+	% 					}
+	% 					\new Staff {
+	% 						\set Staff.instrumentName = "2"
+	% 						\GratiasViolinoII
+	% 					}
+	% 				>>
+	% 			>>
+	% 			\new ChoirStaff \with { \smallGroupDistance } <<
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = "A"
+	% 					\new Voice = "Alto" { \dynamicUp \GratiasAltoNotes }
+	% 				}
+	% 				\new Lyrics \lyricsto Alto \GratiasAltoLyrics
+	% 			>>
+	% 			\new StaffGroup <<
+	% 				\new Staff {
+	% 					\set Staff.instrumentName = \markup { \center-column { "org" "b" } }
+	% 					% \transpose c c,
+	% 					\GratiasOrgano
+	% 				}
+	% 			>>
+	% 			\new FiguredBass { \GratiasBassFigures }
+	% 		>>
+	% 		\layout { }
+	% 		\midi { \tempo 4 = 120 }
+	% 	}
+	% }
 	\bookpart {
 		\header {
-			subtitle = "G R A T I A S   A G I M U S   T I B I"
+			subtitle = "D O M I N E   D E U S"
 		}
-		\paper { systems-per-page = #2 }
-		\tocSubsection "2.3" "Gratias agimus tibi"
+		% \tocSubsection "2.4" "Domine Deus"
 		\score {
 			<<
-				\new Staff \with { \smallStaffDistance } {
-					\set Staff.instrumentName = "trb"
-					\GratiasTrombone
-				}
 				\new StaffGroup <<
-					\new GrandStaff \with { \smallGroupDistance } <<
+					\new GrandStaff  <<
 						\set GrandStaff.instrumentName = "vl"
 						\new Staff {
 							\set Staff.instrumentName = "1"
-							\GratiasViolinoI
+							\DomineViolinoI
 						}
 						\new Staff {
 							\set Staff.instrumentName = "2"
-							\GratiasViolinoII
+							\DomineViolinoII
 						}
 					>>
 				>>
-				\new ChoirStaff \with { \smallGroupDistance } <<
+				\new ChoirStaff <<
+					\new Staff {
+						\set Staff.instrumentName = "S"
+						\new Voice = "Soprano" { \dynamicUp \DomineSopranoNotes }
+					}
+					\new Lyrics \lyricsto Soprano \DomineSopranoLyrics
+
 					\new Staff {
 						\set Staff.instrumentName = "A"
-						\new Voice = "Alto" { \dynamicUp \GratiasAltoNotes }
+						\new Voice = "Alto" { \dynamicUp \DomineAltoNotes }
 					}
-					\new Lyrics \lyricsto Alto \GratiasAltoLyrics
+					\new Lyrics \lyricsto Alto \DomineAltoLyrics
+
+					\new Staff {
+						\set Staff.instrumentName = "T"
+						\new Voice = "Tenore" { \dynamicUp \DomineTenoreNotes }
+					}
+					\new Lyrics \lyricsto Tenore \DomineTenoreLyrics
+
+					\new Staff {
+						\set Staff.instrumentName = "B"
+						\new Voice = "Basso" { \dynamicUp \DomineBassoNotes }
+					}
+					\new Lyrics \lyricsto Basso \DomineBassoLyrics
 				>>
 				\new StaffGroup <<
 					\new Staff {
 						\set Staff.instrumentName = \markup { \center-column { "org" "b" } }
 						% \transpose c c,
-						\GratiasOrgano
+						\DomineOrgano
 					}
 				>>
-				\new FiguredBass { \GratiasBassFigures }
+				\new FiguredBass { \DomineBassFigures }
 			>>
 			\layout { }
-			\midi { \tempo 4 = 120 }
+			\midi { \tempo 4 = 90 }
 		}
 	}
 }

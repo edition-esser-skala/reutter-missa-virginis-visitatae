@@ -122,3 +122,30 @@ GratiasViolinoII = {
 		e2.\fermata \bar "||"
 	}
 }
+
+DomineViolinoII = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \tempoDomine
+			\set Score.currentBarNumber = #80
+		R1*2
+		d'4~\fE d16 c d e \once \tieDashed d4~ d16 c d e
+		d8 c16 h c4 h16 g a h c d e f
+		g4 r g c,
+		g'16 e c g r4 e'16 c g e a4 %85
+		g16 f e f e8 d c4 r
+		R1*5 %91
+		r2 g''16\fE fis g a \once \tieDashed g4~
+		g16 fis g a g4 h8 a16 g a4
+		g r r16 c,, d e f g a h
+		c8 e h a g4 r %95
+		R1*4
+		r2 c4~\fE c16 h c d %100
+		c4~ c16 h c d c8 h16 a a8 gis
+		a4 r r2
+		R1*5 %107
+		\once \tieDashed g'4~\fE g16 f g a g4~ g16 f g a
+		g8 f16 e f4 e8 c4 a8
+		g f16 e e8 d e4 r\fermata \bar "||" %110 finis
+	}
+}

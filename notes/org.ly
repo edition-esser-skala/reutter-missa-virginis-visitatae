@@ -278,15 +278,77 @@ GratiasBassFigures = \figuremode {
 	r2. %79 finis
 }
 
-Organo = {
+DomineOrgano = {
 	\relative c {
 		\clef bass
-
+		\key c \major \time 4/4 \tempoDomine
+			\set Score.currentBarNumber = #80
+		\mvTr c8\fE-\soloE d e f e d e f
+		e c d g, c4. a8
+		h a h c h a h c
+		g g' g fis g4. f8
+		e4. d8 e e f4
+		e d c f8 fis %85
+		g c, g' g, c\pE d e f
+		e d e f e c d g,
+		c c16 d e8 d c4. c8
+		d d, d' c h a h4
+		c4. c8 d4. d8 %90
+		e4. e8 fis4. fis8
+		g g, d' d, g\fE a h c
+		h a h c g g'4 fis8
+		g4. f8 e4. d8
+		c c' d d, g,\pE a h c %95
+		h a h c h g a d,
+		g' g, g' f! e d e c
+		f e f d e e, e' d c h c a
+		gis' fis? gis4
+		a8 d, e e, a\fE h c a %100
+		r a16 h c8 a a' d, e e,
+		a\pE h c a r a16 h c8 a
+		a h c a e' e, e' d
+		cis h cis a d d, d' h16 g
+		c4. c8 g'4. g,8 %105
+		c4. d8 e4. d8
+		c4. d8 e a g g,
+		c4.\fE d8 e4. f8
+		e c d g, c4 f8 fis
+		g c, g' g, c4 r\fermata \bar "||" %110 finis
 	}
 }
 
-BassFigures = \figuremode {
-
+DomineBassFigures = \figuremode {
+	r1 %80
+	<[6]>4 <7>8 q r4. <6\\>8
+	<[6]>1
+	r8 <3> <4 2> <[\t \t]> r4. <2>8
+	\bo <[6]>4. <6>8 \bc <[6]>2
+	\bo <[6]>4 \bc q2 <6>8 <5> %85
+	r4 \bo <[6 4]>8 \bc <[5 3]> r2
+	r2. \bo <[7]>8 \bc q
+	r1
+	<_+>2 <[6]>
+	r4. <6>8 <_+>4. <6 [_+]>8 %90
+	r4. <6>8 <[6]>2
+	r4 <4>8 <_+> r2
+	r2 r8 <3> <2> <[\t]>
+	r4. <2>2 <6>8
+	\bo <[5]> <6> <6 4> \bc <[5] _+> r2 %95
+	r2. <7>8 <7 _+>
+	r2 <[6]>
+	r4. <6>16 <5> <_+>2
+	<6> q
+	r4 <4>8 <_+> r2 %100
+	r2. \bo <[6 4]>8 \bc <[5 _+]>
+	r1
+	r2 \bo <[6] 4>8 \bc <[5] _+>4.
+	<6>2 \bo <[9]>8 <8>4 \bc <[6]>8
+	<9> <8> r2. %105
+	r1
+	r2. \bo <[6 4]>8 \bc <[5 3]>
+	r1
+	r4 <7>8 <[7]> r4 <6>8 <5>
+	<7>4 \bo <[6 4]>8 \bc <[5 3]> r2 %110 finis
 }
 
 Organo = {

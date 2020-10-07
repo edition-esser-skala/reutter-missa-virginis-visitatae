@@ -167,6 +167,34 @@ LaudamusSopranoLyrics = \lyricmode {
 	_ _ _ mus te. %37 finis
 }
 
+DomineSopranoNotes = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \autoBeamOff \tempoDomine
+			\set Score.currentBarNumber = #80
+		R1*22 %101
+		\once \tieDashed \mvTr c'4~\pE^\solo c16[ h c d] c4~ c16[ h c d]
+		c4. d16 c c8([ h)] h4
+		e4. e8 e[ d16 c] d4~
+		d8 c16([ h)] c8 d16 c h[ a h c] d[ c d h] %105
+		c[ h c d] \once \tieDashed e4~ e16[ d e f] e4~
+		e16[ d e f] \once \tieDashed e4~ e8[ d16 c] c8[ h]
+		c4 r r2
+		R1
+		R\fermataMarkup \bar "||" %110 finis
+	}
+}
+
+DomineSopranoLyrics = \lyricmode {
+	Do -- _ %102
+	_ mi -- ne De -- us,
+	A -- gnus De -- _
+	i, Fi -- li -- us Pa -- _ %105
+	_ _ _
+	_ _
+	tris. %108 finis
+}
+
 % SopranoNotes = {
 % 	\relative c' {
 % 		\clef treble

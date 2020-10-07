@@ -73,6 +73,34 @@ GloriaBassoLyrics = \lyricmode {
 	tis. %10 finis
 }
 
+DomineBassoNotes = {
+	\relative c {
+		\clef bass
+		\key c \major \time 4/4 \autoBeamOff \tempoDomine
+			\set Score.currentBarNumber = #80
+		R1*6 %85
+		r2 \mvTr g'4~\pE^\solo g16[ f g a]
+		g4~ g16[ f g a] g8 f16 e f4
+		e r c'8. h16 a([ g)] fis([ e)]
+		fis8.([ e16)] d4 g4. d8
+		e[ c16 h] c[ e a g] fis8[ d16 c] d[ fis h a] %90
+		g8[ e16 d] e[ g c h] a[ g fis e] d[ a' g a]
+		h8 a16 g fis8. g16 g4 r
+		R1*17 %109
+		R1\fermataMarkup \bar "||" %110 finis
+	}
+}
+
+DomineBassoLyrics = \lyricmode {
+	Do -- %86
+	_ _ mi -- ne De --
+	us, De -- us Rex coe --
+	le -- stis, De -- us
+	Pa -- _ _ _ %90
+	_ _ _ _
+	_ ter o -- mni -- po -- tens. %92 finis
+}
+
 % BassoNotes = {
 % 	\relative c {
 % 		\clef bass

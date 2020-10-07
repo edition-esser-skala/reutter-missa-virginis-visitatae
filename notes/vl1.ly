@@ -136,6 +136,34 @@ GratiasViolinoI = {
 	}
 }
 
+DomineViolinoI = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \tempoDomine
+			\set Score.currentBarNumber = #80
+		g''4~\fE g16 f g a g4~ g16 f g a
+		g8 f16 e f4 e16 g, a h c d e fis
+		g fis g a \once \tieDashed g4~ g16 fis g a g4
+		h8 a16 g a4 g r
+		g16 c, d e f g a h c8 c a16 f c a
+		r4 f'16 d h f r4 a'16 c, d c %85
+		h8 c c h c4 r
+		R1*5 %91
+		r2 d4~\fE d16 c d e
+		d4~ d16 c d e d8 c16 h c4
+		h16 g a h c d e f! g4. f8
+		e a g fis g4 r %95
+		R1*4
+		r2 e4~\fE e16 d e f %100
+		\once \tieDashed e4~ e16 d e f e8 d16 c c8. h16
+		a4 r r2
+		R1*5 %107
+		c'16\fE h c d \once \tieDashed c4~ c16 h c d \once \tieDashed c4~
+		c c8 h c g a16 c, d c
+		h8 c c h c4 r\fermata \bar "||" %110 finis
+	}
+}
+
 % ViolinoI = {
 % 	\relative c' {
 % 		\clef treble

@@ -88,6 +88,32 @@ GloriaTenoreLyrics = \lyricmode {
 	tis. %10 finis
 }
 
+DomineTenoreNotes = {
+	\relative c' {
+		\clef "treble_8"
+		\key c \major \time 4/4 \autoBeamOff \tempoDomine
+			\set Score.currentBarNumber = #80
+		R1*15 %94
+		r2 \mvTr d4~\pE^\soloE d16[ c d e] %95
+		d4~ d16[ c d e] d8 c16 h c4
+		h h8 a16([ h)] c4~ c16[ c h c]
+		a[ gis a h] a[ c h a] gis8. a16 h4
+		a16[ gis a h] a[ c h a] h[ a h c] h[ d c h]
+		c8 h16([ a)] a8([ gis)] a4 r %100
+		R1*9 %109
+		R1\fermataMarkup \bar "||" %110 finis
+	}
+}
+
+DomineTenoreLyrics = \lyricmode {
+	Do -- %95
+	_ _ mi -- ne Fi --
+	li u -- ni -- ge --
+	_ _ _ ni -- te,
+	Je -- _ _ _
+	_ su Chri -- ste. %100 finis
+}
+
 % TenoreNotes = {
 % 	\relative c' {
 % 		\clef "treble_8"
