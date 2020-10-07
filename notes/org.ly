@@ -406,15 +406,53 @@ QuiTollisBassFigures = \figuremode {
 	\bo <[6] 4>4 \bc <[5]3>2. %133 finis
 }
 
-Organo = {
+QuoniamOrgano = {
 	\relative c {
 		\clef bass
-
+		\key c \major \time 4/4 \tempoQuoniam
+			\set Score.currentBarNumber = #134
+		\mvTr c8\fE-\solo d e c h a h g
+		c d e c f4 e %135
+		d8 c h g c4 d
+		e8 c16 d e8 f g c, g' g,
+		c\pE d e c h' a h g
+		c,\fE c' h g c c,16 d e8 h\pE
+		c h c a d d, d'16 c h8 %140
+		c8 h c a d c d h
+		e d16 c h8 c d4 d8 c
+		h4 c d16 c h c d4
+		g,\fE c d e
+		fis16 d g c, d4 g,8\pE a h g %145
+		a g a h c d e c
+		d4 g8 g, c d e c
+		g' g, g' f e c r4
+		c8 f g g, c\fE e f4
+		g a8 g16 f e4. f8 %150
+		g c, g' g, c2
+		c4 r r2\fermata \bar "||" %152 finis
 	}
 }
 
-BassFigures = \figuremode {
-
+QuoniamBassFigures = \figuremode {
+	r2 <[6]> %134
+	r <6>4 <[6]> %135
+	r4 <[6 5]>2.
+	<[6]>1
+	r2 <[6]>
+	r4 <[6]> r4. <6>8
+	r2 <_+>4. <[6]>8 %140
+	r2 <_+>
+	r4 \bo <[6]>8 <6> <_+>4. \bc <[\t]>8
+	<6>4 q <_+>8 \bo <[6 \l]>16 <6> <6 4>8 \bc <[5 _+]>
+	r2 <_+>
+	<[6]>4 <_+> r <[6]> %145
+	<6!>4. <[6]>8 r2
+	r1
+	r2 <[6]>
+	r4 \bo <[6 4]>8 \bc <[5 3]> r2
+	r <[6]> %150
+	r1
+	r %152 finis
 }
 
 Organo = {

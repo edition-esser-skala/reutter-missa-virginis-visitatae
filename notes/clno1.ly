@@ -61,3 +61,27 @@ QuiTollisClarinoI = {
 		e4^\critnote d c2\fermata \bar "||" %133 finis
 	}
 }
+
+QuoniamClarinoI = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \tempoQuoniam
+			\set Score.currentBarNumber = #134
+		g''8.\fE c,16 c d e f g f g a g a g f
+		e8. d16 c8 g' a16 d, \tuplet 3/2 8 { d[ e d] } g c, \tuplet 3/2 8 { c[ d c] } %135
+		f e f g f g f g e f d e f g e f
+		g2 g8 f16 e d8. c16
+		c4 r r2
+		c16\fE d e f g a g f e8. d16 c4
+		R1*4 %143
+		g'16\fE d \tuplet 3/2 8 { d[ e d] } e fis d e fis g e fis g a fis g
+		a8 h a8. g16 g4 r %145
+		r2 r4 r8 g\pE
+		f16 g e f d e f d e4. e8
+		d d d e16 f g f g a g a g a
+		g8 f16 e e8^\critnote d c16\fE g' g8\trill a16 a a8\trill
+		h16 h h8\trill c4~ c8 h16 a g4~ %150
+		g8 f16 e d8. c16 c8 g e g
+		c,4 r r2\fermata \bar "||"
+	}
+}

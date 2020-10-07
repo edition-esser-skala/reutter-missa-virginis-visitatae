@@ -253,6 +253,44 @@ QuiTollisAltoLyrics = \lyricmode {
 	no -- bis. %133 finis
 }
 
+QuoniamAltoNotes = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 4/4 \autoBeamOff \tempoQuoniam
+			\set Score.currentBarNumber = #134
+		R1*4 %137
+		\mvTr g'8.\pE^\solo c,16 c([ d)] e([ f)] g([ f g a] g[ a)] g([ f)]
+		e8.([ d16)] c4 r r8 d
+		e16([ d e fis] e[ fis)] g([ a)] fis8. e16 d8 d %140
+		e16[ d e fis] e[ fis g a] fis[ e fis g] fis[ g a h]
+		g4 g8 a fis8. g16 a4
+		g16[ d] \tuplet 3/2 8 { d[ e d] } e[ a a e] fis8 g16([ a)] h8([ a)]
+		g4 r r2
+		r d8. d16 d8 g %145
+		f!16[( e f g] f[ a)] g([ f)] e8.([ d16)] c8 e
+		d16([ e)] c([ d)] h([ c)] d([ h)] c4. c8
+		h h h c16 d e[ d e f] e[ f e f]
+		g8 f16([ e)] e8([ d)] c4 r
+		R1*2 %151
+		R1\fermataMarkup \bar "||" %152 finis
+	}
+}
+
+QuoniamAltoLyrics = \lyricmode {
+	Quo -- ni -- am tu so -- lus %138
+	san -- ctus, tu
+	so -- lus Do -- mi -- nus, tu %140
+	so -- _ _ _
+	_ lus al -- tis -- si -- mus,
+	Je -- _ _ _ su Chri --
+	ste.
+	Quo -- ni -- am tu %145
+	so -- lus san -- ctus, tu
+	so -- lus, so -- lus Do -- mi --
+	nus, al -- tis -- si -- mus Je -- _
+	_ su Chri -- ste. %149 finis
+}
+
 % AltoNotes = {
 % 	\relative c' {
 % 		\clef treble
