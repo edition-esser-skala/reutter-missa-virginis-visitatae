@@ -291,13 +291,71 @@ QuoniamAltoLyrics = \lyricmode {
 	_ su Chri -- ste. %149 finis
 }
 
-% AltoNotes = {
-% 	\relative c' {
-% 		\clef treble
-%
-% 	}
-% }
-%
-% AltoLyrics = \lyricmode {
-%
-% }
+CumSanctoAltoNotes = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 2/2 \autoBeamOff \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		\mvTr g'1\fE^\tutti
+		g2 a
+		g c, %155
+		f2. f4
+		e2 r
+		R1*4 %161
+		r2 r4 d
+		h e d g
+		fis2 a8[( g e fis]
+		g4) d e d8[ c] %165
+		h4 e2 d4
+		d2 r4 g(
+		a2.) g4
+		g g f( d)
+		c a'( g e %170
+		f2) e4 r
+		R1*7 %178
+		r2 g
+		fis4 fis8 fis h4 h %180
+		a g8([ fis)] e4( fis)
+		g g fis g
+		a2 g8[ fis g a]
+		g4 d c d
+		h g'( f e) %185
+		d r r2
+		r4 d c d
+		h c8[ d] e4 d
+		e r r2
+		R1 %190
+		R\fermataMarkup \bar "|." %191 FINIS
+	}
+}
+
+CumSanctoAltoLyrics = \lyricmode {
+	Cum %153
+	San -- cto,
+	San -- cto %155
+	Spi -- ri --
+	tu,
+
+	a -- %162
+	_ _ _ _
+	men, a --
+	men, a -- _ %165
+	_ _ _
+	men, a --
+	men,
+	a -- men, a --
+	men, a -- %170
+	men,
+
+	in %179
+	glo -- ri -- a De -- i %180
+	Pa -- tris, a --
+	men, a -- _ _
+	_ _
+	_ _ _ _
+	men, a -- %185
+	men,
+	a -- _ _
+	_ _ _ _
+	men. %189 FINIS
+}

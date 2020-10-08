@@ -161,13 +161,70 @@ QuiTollisTenoreLyrics = \lyricmode {
 	no -- bis. %133 finis
 }
 
-% TenoreNotes = {
-% 	\relative c' {
-% 		\clef "treble_8"
-%
-% 	}
-% }
-%
-% TenoreLyrics = \lyricmode {
-%
-% }
+CumSanctoTenoreNotes = {
+	\relative c' {
+		\clef "treble_8"
+		\key c \major \time 2/2 \autoBeamOff \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		R1*4 %156
+		r4 \mvTr c\fE^\tuttiE h e
+		d8[ c h a] h2
+		c4 g8[ f] g4 f
+		e g c h %160
+		a h8[ c] d4 d
+		e2 c4 h8[ a]
+		h2 r
+		R1*2 %165
+		r2 c
+		h4 h8 h e4 e
+		d c8([ h)] a4( h
+		c) c d g,
+		a2 e'4 a, %170
+		d2 e4 r
+		R1*6 %177
+		d1
+		d2 e
+		d g, %180
+		c2. c4
+		d c d( h
+		d2) e4 a,
+		h g c( a)
+		d g,( h g) %185
+		g r r2
+		r4 g c a
+		d g, g2
+		g4 r r2
+		R1 %190
+		R\fermataMarkup \bar "|." %191 FINIS
+	}
+}
+
+CumSanctoTenoreLyrics = \lyricmode {
+	A -- _ _ %157
+	_ _
+	men, a -- _ _
+	_ _ _ _ %160
+	_ _ _ men,
+	a -- _ _
+	men,
+
+	in %166
+	glo -- ri -- a De -- i
+	Pa -- tris, a --
+	men, a -- _
+	_ _ _ %170
+	_ men,
+
+	cum %178
+	San -- cto,
+	San -- cto %180
+	Spi -- ri --
+	tu in glo --
+	ri -- a
+	De -- i Pa --
+	tris, a -- %185
+	men,
+	a -- _ _
+	_ men, a --
+	men. %189 FINIS
+}

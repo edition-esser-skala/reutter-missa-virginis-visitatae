@@ -38,3 +38,21 @@ GloriaTimpani = {
 		c4. c16 c c2-\critnote\fermata \bar "||" %10 finis
 	}
 }
+
+CumSanctoTimpani = {
+	\relative c {
+		\clef bass
+		\key c \major \time 2/2 \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		R1*21 %173
+		r4 g\fE c4. c8
+		g4 r r2 %175
+		R1*10 %185
+		r4 g g c
+		g r r2
+		r4 c g4. g8
+		c4 r r2
+		r4 c g4. g8 %190
+		c4 r r2\fermata \bar "|." %191 finis
+	}
+}

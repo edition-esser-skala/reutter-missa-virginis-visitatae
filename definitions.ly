@@ -466,7 +466,7 @@ bc =
 	\context {
 		\Score
 		\compressFullBarRests
-		\override BarNumber.break-visibility = #'#(#f #t #t)
+		% \override BarNumber.break-visibility = #'#(#f #t #t)
 	}
 	\context {
 		\StaffGroup
@@ -667,6 +667,7 @@ tempoGloria = \tempoMarkup "Allegro"
 	tempoDomine = \tempoMarkup "Allegro"
 	tempoQuiTollis = \tempoMarkup "Grave"
 	tempoQuoniam = \tempoMarkup "Allegro"
+	tempoCumSancto = \tempoMarkup "Alla breve"
 
 
 \include "notes/clno1.ly"

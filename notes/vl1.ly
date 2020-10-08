@@ -191,9 +191,47 @@ QuiTollisViolinoI = {
 	}
 }
 
-% ViolinoI = {
-% 	\relative c' {
-% 		\clef treble
-%
-% 	}
-% }
+CumSanctoViolinoI = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 2/2 \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		R1
+		r2 c'\fE
+		h4 h e e %155
+		d c8 h a4 h
+		c2 r
+		R1
+		c
+		c2 e %160
+		d g,
+		c2. c4
+		h c h e
+		d8 c a h c2
+		h4 h c h8 a %165
+		h4 h c2
+		d r
+		r r4 d
+		g, c2 h4
+		a d2 \once \tieDashed c4~ %170
+		c h c r
+		a'2 g
+		f e
+		d4 g g f8 e
+		d4 h'2 \once \tieDashed a4~ %175
+		a g h8 h a g
+		fis4 g2 fis4
+		g2 r
+		R1*3 %181
+		r4 c, h e
+		d8 c a h c2
+		h4 h a2
+		g4 c h c %185
+		h g' d e
+		d h a2
+		g4 c2 h4
+		c c,2 h4
+		c c''2 h4 %190
+		c r r2\fermata \bar "|." %191 FINIS
+	}
+}

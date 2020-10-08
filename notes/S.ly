@@ -252,13 +252,70 @@ QuiTollisSopranoLyrics = \lyricmode {
 	no -- bis. %133 finis
 }
 
-% SopranoNotes = {
-% 	\relative c' {
-% 		\clef treble
-%
-% 	}
-% }
-%
-% SopranoLyrics = \lyricmode {
-%
-% }
+CumSanctoSopranoNotes = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 2/2 \autoBeamOff \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		R1
+		r2 \mvTr c'\fE^\tuttiE
+		h4 h8 h e4 e %155
+		d c8[ h] a4 h
+		c2 r
+		R1
+		c
+		c2^\critnote e %160
+		d g,
+		c2. c4
+		h c h e
+		d8[ c a h] c2
+		h4 h( c h8[ a)] %165
+		h4 h c2
+		d r
+		r r4 d
+		g, c2 h4
+		a d2 c4~ %170
+		c h c r
+		R1*10 %181
+		r4 c h e
+		d8[ c a h] c2
+		h4 h a2
+		g4 c h c %185
+		h r r2
+		r4 h a2
+		g4 c c( h)
+		c r r2
+		R1 %190
+		R\fermataMarkup \bar "|." %191 FINIS
+	}
+}
+
+CumSanctoSopranoLyrics = \lyricmode {
+	In %154
+	glo -- ri -- a De -- i %155
+	Pa -- _ _ _
+	tris,
+
+	cum
+	San -- cto, %160
+	San -- cto
+	Spi -- ri --
+	tu, a -- _ _
+	_ _
+	men, a -- %165
+	_ men, a --
+	men,
+	a --
+	_ _ _
+	_ _ _ %170
+	_ men,
+
+	a -- _ _ %182
+	_ _
+	men, a -- _
+	_ _ _ _ %185
+	men,
+	a -- _
+	_ men, a --
+	men. %189 FINIS
+}

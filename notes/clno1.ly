@@ -85,3 +85,23 @@ QuoniamClarinoI = {
 		c,4 r r2\fermata \bar "||"
 	}
 }
+
+CumSanctoClarinoI = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 2/2 \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		R1*19 %171
+		a''2\fE g
+		f e
+		d4 g g f8 e
+		d4 r r2 %175
+		R1*10 %185
+		r4 g d e
+		d r r2
+		r4 g g4. f8
+		e4 g f8 a g f
+		e4. d8 d4. c8 %190
+		c4 r r2\fermata \bar "|." %191 FINIS
+	}
+}

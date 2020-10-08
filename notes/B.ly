@@ -148,13 +148,68 @@ QuiTollisBassoLyrics = \lyricmode {
 	no -- bis. %133 finis
 }
 
-% BassoNotes = {
-% 	\relative c {
-% 		\clef bass
-%
-% 	}
-% }
-%
-% BassoLyrics = \lyricmode {
-%
-% }
+CumSanctoBassoNotes = {
+	\relative c {
+		\clef bass
+		\key c \major \time 2/2 \autoBeamOff \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		R1*3 %155
+		r2 r4 \mvTr g'4\fE^\tuttiE
+		e a g8[ f e c]
+		f2 g8[ f e d]
+		e4 e8([ d] e4 d)
+		c2. g'4 %160
+		fis fis8 fis h4 h
+		a( g8[ fis)] e4 fis
+		g2 r
+		R1
+		g %165
+		g2 a
+		g c,
+		f2. f4
+		e e d g~
+		g f e a %170
+		d, g c, r
+		R1*9 %180
+		r2 r4 d
+		h e d g
+		fis2 e8[ d e fis]
+		g4 g2 f4~
+		f e d c %185
+		g' r r2
+		r4 g2 f4~
+		f e8([ f)] g4( g,)
+		c r r2
+		R1 %190
+		R\fermataMarkup \bar "|." %191 FINIS
+	}
+}
+
+CumSanctoBassoLyrics = \lyricmode {
+	A -- %156
+	_ _ _
+	_ _
+	men, a --
+	men, in %160
+	glo -- ri -- a De -- i
+	Pa -- tris, a --
+	men,
+
+	cum %165
+	San -- cto,
+	San -- cto
+	Spi -- ri --
+	tu in glo -- _
+	ri -- a De -- %170
+	i Pa -- tris,
+
+	a -- %181
+	_ _ _ _
+	_ _
+	men, a -- _
+	_ _ _ %185
+	men,
+	a -- _
+	men, a --
+	men. %189 FINIS
+}

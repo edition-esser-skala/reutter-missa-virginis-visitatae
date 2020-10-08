@@ -455,35 +455,109 @@ QuoniamBassFigures = \figuremode {
 	r %152 finis
 }
 
-Organo = {
+CumSanctoOrgano = {
 	\relative c {
-		\clef bass
-
+		\clef treble
+		\key c \major \time 2/2 \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		\mvTr g''1\fE-\tuttiE
+		<< {
+			r2 c
+			h4 g e' e %155
+			d c8 h a4
+		} \\ {
+			g2 a
+			g c, %155
+			f2.
+		} >> \clef bass g,4
+		e a g8 f e c
+		f2 g8 f e d
+		e4 e8 d e4 d
+		c2. g'4 %160
+		fis fis h h
+		a g8 fis e4 fis
+		g2 \clef treble << {
+			h'4 e
+			d8 c a h c2
+		} \\ {
+			d,4 g
+			fis2 a8 g e fis
+		} >>
+		\clef bass g,1 %165
+		g2 a
+		g c,
+		f2. f4
+		e e d g~
+		g f e a %170
+		d, g c, e
+		f f, c'4. c8
+		a'4 h c c,
+		g' h, c2
+		g4 g' a fis %175
+		g2. c4
+		d g, d' d,
+		g,2 \clef treble << {
+			r2
+			r g''
+			fis h4 h %180
+			a g8 fis e4
+		} \\ {
+			d2
+			d e
+			d g, %180
+			c2.
+		} >> \clef bass d,4
+		h e d g
+		fis2 e8 d e fis
+		g4 g2 f4~
+		f e d c %185
+		g' g, g' c,
+		g g'2 f4~
+		f e8 f g4 g,
+		c r r2
+		r4 c g2 %190
+		c4 r r2\fermata \bar "|." %191 FINIS
 	}
 }
 
-BassFigures = \figuremode {
-
+CumSanctoBassFigures = \figuremode {
+	r1 %153
+	r
+	r %155
+	r2. <3>4
+	q q <[3]> <8>
+	<6>1
+	<[6]>1
+	r2. <6>4 %160
+	q2 q
+	r <6>4 <6 5>
+	<3>1
+	r
+	<5 3>2 <6 4> %165
+	<5 3> <7>4 <6\\>
+	r1
+	<[6]>2. <4 2>4
+	<6>2 <[7]>4 <3>
+	<4 2> <6> <7>2 %170
+	q2. <[6]>4
+	<9>2 <4>4 <3>
+	<6 5>2 <9>4 <8>
+	r <6>2.
+	r2 \bo <[9 \l]>4 <6 5> %175
+	<9> <8>2 <8 6>8 \bc <[7 5]>
+	<_+>2 <4>4 <_+>
+	r1
+	r
+	r %180
+	r2. <[7] _+>4
+	<6> \bo <[6]> \bc <[6] _+> <6>
+	q2 q
+	r4 <3> <2> <6>
+	<4 2> <6> <[6]>2 %185
+	r1
+	r4 <5> <2> <6>
+	<4 2> <6> \bo <[6] 4> \bc <[5] 3>
+	r1
+	r2 \bo <[4]>4 \bc <[3]> %190
+	r1 %191 FINIS
 }
-
-Organo = {
-	\relative c {
-		\clef bass
-
-	}
-}
-
-BassFigures = \figuremode {
-
-}
-
-% Organo = {
-% 	\relative c {
-% 		\clef bass
-%
-% 	}
-% }
-%
-% BassFigures = \figuremode {
-%
-% }

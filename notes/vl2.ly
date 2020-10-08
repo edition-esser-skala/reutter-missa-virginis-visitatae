@@ -176,3 +176,47 @@ QuiTollisViolinoII = {
 		g2 g\fermata \bar "||" %133 finis
 	}
 }
+
+CumSanctoViolinoII = {
+	\relative c' {
+		\clef treble
+		\key c \major \time 2/2 \tempoCumSancto
+			\set Score.currentBarNumber = #153
+		g'1\fE
+		g2 a
+		g c, %155
+		f2. f4
+		e2-\critnote r
+		R1*4 %161
+		r2 r4 d
+		h e d g
+		fis2 a8 g e fis
+		g4 d e d8 c %165
+		d4 g2 fis4
+		d2 r4 g
+		a2. g4
+		g g d d
+		c a' g e %170
+		f2 e4 g'
+		g f2 \once \tieDashed e4~
+		e d2 c4
+		g d' e d8 c
+		h4 d c2 %175
+		h d4 c8 h
+		a4 \once \tieDashed h~ h a
+		h2 r
+		r g
+		fis4 fis8 fis h4 h %180
+		a g8 fis e4 fis
+		g g fis g
+		a2 g8 fis g a
+		g4 d c d
+		h g' f e %185
+		d r h' c
+		h d, c d
+		h c8 d e4 d
+		e \once \tieDashed c~ c h
+		c g'' g4. g8 %190
+		g4 r r2\fermata \bar "|." %191 FINIS
+	}
+}
