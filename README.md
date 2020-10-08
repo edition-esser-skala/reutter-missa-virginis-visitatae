@@ -1,4 +1,4 @@
-# Georg Reutter der Jüngere: Missa Virginis Visitatae HofR 19/36
+# Georg Reutter der Jüngere: Missa Virginis Visitatae (Kyrie & Gloria) HofR 19/36
 
 Engraving files for LilyPond 2.18.0
 
