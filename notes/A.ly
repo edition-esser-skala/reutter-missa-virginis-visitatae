@@ -1,8 +1,4 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 
 AltoIncipit = \markup {
 	"Alto" \hspace #-16.8 \score {
@@ -140,7 +136,7 @@ GratiasAltoNotes = {
 		e8([ fis] g4 fis)
 		e2 r4 %75
 		R2.*3
-		R2.\fermataMarkup \bar "||" %79 finis
+		R2.\fermata \bar "||" %79 finis
 	}
 }
 
@@ -184,7 +180,7 @@ DomineAltoNotes = {
 		g16[ f g a] \once \tieDashed g4~ g8[ f16 e] e8[ d]
 		c4 r r2
 		R1
-		R\fermataMarkup \bar "||" %110 finis
+		R\fermata \bar "||" %110 finis
 	}
 }
 
@@ -272,7 +268,7 @@ QuoniamAltoNotes = {
 		h h h c16 d e[ d e f] e[ f e f]
 		g8 f16([ e)] e8([ d)] c4 r
 		R1*2 %151
-		R1\fermataMarkup \bar "||" %152 finis
+		R1\fermata \bar "||" %152 finis
 	}
 }
 
@@ -325,7 +321,7 @@ CumSanctoAltoNotes = {
 		h c8[ d] e4 d
 		e r r2
 		R1 %190
-		R\fermataMarkup \bar "|." %191 FINIS
+		R\fermata \bar "|." %191 FINIS
 	}
 }
 

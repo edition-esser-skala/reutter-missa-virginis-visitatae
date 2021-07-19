@@ -1,8 +1,4 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 
 SopranoIncipit = \markup {
 	"Soprano" \hspace #-19 \score {
@@ -142,7 +138,7 @@ LaudamusSopranoNotes = {
 		\tuplet 3/2 8 { e[ d c] c[ d e] } f,[ c' h c] \tuplet 3/2 8 { d[ c h] h[ c d] } e,[ h' a h]
 		\tuplet 3/2 8 { c[ h a] } f'[ a,] gis8. a16 a4 r
 		R1*7 %44
-		R1\fermataMarkup \bar "||" %45 finis
+		R1\fermata \bar "||" %45 finis
 	}
 }
 
@@ -181,7 +177,7 @@ DomineSopranoNotes = {
 		e16[ d e f] \once \tieDashed e4~ e8[ d16 c] c8[ h]
 		c4 r r2
 		R1
-		R\fermataMarkup \bar "||" %110 finis
+		R\fermata \bar "||" %110 finis
 	}
 }
 
@@ -286,7 +282,7 @@ CumSanctoSopranoNotes = {
 		g4 c c( h)
 		c r r2
 		R1 %190
-		R\fermataMarkup \bar "|." %191 FINIS
+		R\fermata \bar "|." %191 FINIS
 	}
 }
 

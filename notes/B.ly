@@ -1,8 +1,4 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 
 KyrieBassoNotes = {
 	\relative c {
@@ -87,7 +83,7 @@ DomineBassoNotes = {
 		g8[ e16 d] e[ g c h] a[ g fis e] d[ a' g a]
 		h8 a16 g fis8. g16 g4 r
 		R1*17 %109
-		R1\fermataMarkup \bar "||" %110 finis
+		R1\fermata \bar "||" %110 finis
 	}
 }
 
@@ -181,7 +177,7 @@ CumSanctoBassoNotes = {
 		f e8([ f)] g4( g,)
 		c r r2
 		R1 %190
-		R\fermataMarkup \bar "|." %191 FINIS
+		R\fermata \bar "|." %191 FINIS
 	}
 }
 

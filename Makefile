@@ -1,8 +1,3 @@
-# (c) 2020 by Wolfgang Esser-Skala.
-# This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-# To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-
 # change the following variables according to your project
 project = Reutter_Missa_HofR_19_36
 notes = clno1 clno2 trb timp vl1 vl2 S A T B org

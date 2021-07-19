@@ -1,15 +1,15 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 
 \include "../definitions.ly"
 
 \paper {
-	#(set-paper-size "a4" 'landscape)
-	indent = 1\cm
-	#(define (page-post-process layout pages) (ly:create-toc-file layout pages))
+  #(set-paper-size "a4landscape")
+  top-margin = 1\cm
+  bottom-margin = .5\cm
+  outer-margin = 2\cm
+  inner-margin = 1.5\cm
+  indent = 1\cm
+  #(define (page-post-process layout pages) (ly:create-toc-file layout pages))
 }
 
 #(set-global-staff-size 15.87)
@@ -27,7 +27,7 @@
 				\new StaffGroup \with { \smallGroupDistance } <<
 					\new Staff <<
 						\set Staff.instrumentName = \markup \center-column { "Clarino I, II" "in C" }
-						\partcombine \KyrieClarinoI \KyrieClarinoII
+						\partCombine \KyrieClarinoI \KyrieClarinoII
 					>>
 				>>
 				\new Staff {
@@ -102,7 +102,7 @@
 				\new StaffGroup \with { \smallGroupDistance } <<
 					\new Staff <<
 						\set Staff.instrumentName = \markup \center-column { "clno" "1, 2" }
-						\partcombine \GloriaClarinoI \GloriaClarinoII
+						\partCombine \GloriaClarinoI \GloriaClarinoII
 					>>
 				>>
 				\new Staff {
@@ -315,7 +315,7 @@
 					\new Staff <<
 						\set Staff.instrumentName = \markup \center-column { "clno" "1, 2" }
 						\set Staff.soloText = \markup \remark \medium "clno 1"
-						\partcombine \QuiTollisClarinoI \QuiTollisClarinoII
+						\partCombine \QuiTollisClarinoI \QuiTollisClarinoII
 					>>
 				>>
 				\new StaffGroup <<
@@ -415,7 +415,7 @@
 				\new StaffGroup \with { \smallGroupDistance } <<
 					\new Staff <<
 						\set Staff.instrumentName = \markup \center-column { "clno" "1, 2" }
-						\partcombine \CumSanctoClarinoI \CumSanctoClarinoII
+						\partCombine \CumSanctoClarinoI \CumSanctoClarinoII
 					>>
 				>>
 				\new Staff {

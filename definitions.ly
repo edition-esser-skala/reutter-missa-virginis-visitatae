@@ -1,120 +1,116 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 \language "deutsch"
 
 
 \paper {
-	#(set-paper-size "a4" 'portrait)
-	two-sided = ##t
-	top-margin = 1\cm
-	bottom-margin = .5\cm
-	outer-margin = 2\cm
-	inner-margin = 1.5\cm
-	indent = 1\cm
+  #(set-paper-size "a4")
+  two-sided = ##t
+  top-margin = 1\cm
+  bottom-margin = .5\cm
+  outer-margin = 2\cm
+  inner-margin = 1.5\cm
+  indent = 1\cm
 
-	oddFooterMarkup = \markup {}
-	evenFooterMarkup = \markup {}
-	oddHeaderMarkup = \markup {
-		\fill-line {
-			" " \fromproperty #'page:page-number-string
-		}
-	}
-	evenHeaderMarkup = \markup {
-		\fromproperty #'page:page-number-string
-	}
+  oddFooterMarkup = \markup {}
+  evenFooterMarkup = \markup {}
+  oddHeaderMarkup = \markup {
+    \fill-line {
+      " " \fromproperty #'page:page-number-string
+    }
+  }
+  evenHeaderMarkup = \markup {
+    \fromproperty #'page:page-number-string
+  }
 
-	system-system-spacing =
+  system-system-spacing =
     #'((basic-distance . 20)
        (minimum-distance . 20)
        (padding . -100)
        (stretchability . 0))
 
-	top-system-spacing =
-    #'((basic-distance . 15)
-       (minimum-distance . 15)
+  top-system-spacing =
+    #'((basic-distance . 20)
+       (minimum-distance . 20)
        (padding . -100)
        (stretchability . 0))
 
-	top-markup-spacing =
+  top-markup-spacing =
     #'((basic-distance . 5)
        (minimum-distance . 5)
        (padding . -100)
        (stretchability . 0))
 
-	markup-system-spacing =
-    #'((basic-distance . 10)
-       (minimum-distance . 10)
+  markup-system-spacing =
+    #'((basic-distance . 15)
+       (minimum-distance . 15)
        (padding . -100)
        (stretchability . 0))
 
-	last-bottom-spacing =
+  last-bottom-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . 0)
        (stretchability . 1.0e7))
 
-	score-system-spacing =
+  score-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . 0)
        (stretchability . 0))
 
-	score-markup-spacing =
+  score-markup-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . 0)
        (stretchability . 0))
 
-	markup-markup-spacing =
+  markup-markup-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . 0)
        (stretchability . 0))
 
-	bookTitleMarkup = \markup {
-		\fill-line {
-			\line {
-				\fontsize #3 {
-	 				\with-color #(rgb-color .8313 0 0) { \fromproperty #'header:number }
-	 			 	\hspace #3
-	 			 	\fromproperty #'header:title
-				}
-				\fromproperty #'header:subtitle
-			}
- 		}
-	}
+  bookTitleMarkup = \markup {
+    \fill-line {
+      \line {
+        \fontsize #3 {
+          \with-color #(rgb-color .8313 0 0) { \fromproperty #'header:number }
+          \hspace #3
+          \fromproperty #'header:title
+        }
+        \fromproperty #'header:subtitle
+      }
+    }
+  }
 
-	system-separator-markup = \markup {
-		\center-align
-		\vcenter \combine
-		\beam #2.0 #0.5 #0.48
-		\raise #1.0 \beam #2.0 #0.5 #0.48
-	}
+  system-separator-markup = \markup {
+    \center-align
+    \vcenter \combine
+    \beam #2.0 #0.5 #0.48
+    \raise #1.0 \beam #2.0 #0.5 #0.48
+  }
 }
 
 partTitle = #(define-scheme-function
   (parser location number title)
   (string? string?)
   #{
-		\markup {
-			\column {
-				\vspace #25
-				\fill-line { \fontsize #12 \with-color #(rgb-color .8313 0 0) #number }
-				\vspace #3
-				\fill-line { \fontsize #4 #title }
-			}
-		}
-	#}
+    \markup {
+      \column {
+        \vspace #25
+        \fill-line { \fontsize #12 \with-color #(rgb-color .8313 0 0) #number }
+        \vspace #3
+        \fill-line { \fontsize #4 #title }
+      }
+    }
+  #}
 )
 
 partMark = \score {
-	\new Staff \with {
-		\remove "Clef_engraver"
-		\remove "Time_signature_engraver"
-	} { \stopStaff s }
+  \new Staff \with {
+    \remove "Clef_engraver"
+    \remove "Time_signature_engraver"
+  } { \stopStaff s }
 }
 
 
@@ -122,21 +118,21 @@ partMark = \score {
 tempoMarkup = #(define-music-function
   (parser location arg)
   (markup?)
-	#{
-		\tempo \markup \medium { \larger \larger #arg }
-	#}
+  #{
+    \tempo \markup \medium { \larger \larger #arg }
+  #}
 )
 
 #(define-markup-command
-	(remark layout props text)
-	(markup?)
+  (remark layout props text)
+  (markup?)
   (interpret-markup layout props
     #{\markup \small \upright #text #})
 )
 
 #(define-markup-command
-	(remarkE layout props text)
-	(markup?)
+  (remarkE layout props text)
+  (markup?)
   (interpret-markup layout props
     #{\markup \small \italic #text #})
 )
@@ -172,7 +168,6 @@ dolceE =    \markup \remarkE "dolce"
 t = \markup { \combine \fontsize #-2 \transparent \number 5 \raise #.6 \draw-line #'(1 . 0) }
 tllur = \markup { \combine \fontsize #-2 \transparent \number 5 \raise #.6 \draw-line #'(1 . 1) }
 l = \markup { \fontsize #-2 \transparent \number 5 }
-fermataMarkdown = \markup { \musicglyph #'"scripts.dfermata" }
 critnote = \markup { \musicglyph #'"pedal.*" }
 trillE = \tweak self-alignment-X #CENTER ^\markup { \hspace #1.5 [ \musicglyph #'"scripts.trill" ] }
 extraNat = \once \override Accidental.restore-first = ##t
@@ -184,7 +179,7 @@ xE = \override LyricText.font-shape = #'italic
 x = \revert LyricText.font-shape
 
 bp = #(define-music-function
-	(parser location beg end)
+  (parser location beg end)
   (number? number?)
   #{
      \once \override Beam.positions = #(cons beg end)
@@ -194,31 +189,31 @@ bp = #(define-music-function
 
 
 dynScript = #(define-scheme-function
-	(parser location sym extra?)
-	(string? boolean?)
-	(make-dynamic-script
-		(if extra?
-		 (markup #:line (#:normal-text #:italic #:large #:bold sym))
-		 (markup #:line (#:normal-text #:large #:bold sym))
-		)
-	)
+  (parser location sym extra?)
+  (string? boolean?)
+  (make-dynamic-script
+    (if extra?
+      (markup #:line (#:normal-text #:italic #:large #:bold sym))
+      (markup #:line (#:normal-text #:large #:bold sym))
+    )
+  )
 )
 
 dynScriptPrefix = #(define-scheme-function
-	(parser location prefix sym extra?)
-	(string? string? boolean?)
-	(make-dynamic-script
-		(if extra?
-		 (markup #:line (
-			 #:normal-text #:small #:italic prefix
-			 #:normal-text #:italic #:large #:bold sym)
-			)
-		 (markup #:line (
-			 #:normal-text #:small prefix
-			 #:normal-text #:large #:bold sym)
-			)
-		)
-	)
+  (parser location prefix sym extra?)
+  (string? string? boolean?)
+  (make-dynamic-script
+    (if extra?
+      (markup #:line (
+        #:normal-text #:small #:italic prefix
+        #:normal-text #:italic #:large #:bold sym)
+      )
+      (markup #:line (
+        #:normal-text #:small prefix
+        #:normal-text #:large #:bold sym)
+      )
+    )
+  )
 )
 
 ff   = \dynScript "ff"  ##f
@@ -257,71 +252,79 @@ pocoP  = \dynScriptPrefix "poco" "p" ##f
 pocoPE = \dynScriptPrefix "poco" "p" ##t
 
 cresc = #(make-music
-	'CrescendoEvent
-	'span-direction START
-	'span-type 'text
-	'span-text (markup (#:normal-text #:small "cresc."))
+  'CrescendoEvent
+  'span-direction START
+  'span-type 'text
+  'span-text (markup (#:normal-text #:small "cresc."))
 )
 crescE = #(make-music
-	'CrescendoEvent
-	'span-direction START
-	'span-type 'text
-	'span-text (markup (#:normal-text #:small #:italic "cresc."))
+  'CrescendoEvent
+  'span-direction START
+  'span-type 'text
+  'span-text (markup (#:normal-text #:small #:italic "cresc."))
 )
 decresc = #(make-music
-	'DecrescendoEvent
-	'span-direction START
-	'span-type 'text
-	'span-text (markup (#:normal-text #:small "decresc."))
+  'DecrescendoEvent
+  'span-direction START
+  'span-type 'text
+  'span-text (markup (#:normal-text #:small "decresc."))
 )
 decrescE = #(make-music
-	'DecrescendoEvent
-	'span-direction START
-	'span-type 'text
-	'span-text (markup (#:normal-text #:small #:italic "decresc."))
+  'DecrescendoEvent
+  'span-direction START
+  'span-type 'text
+  'span-text (markup (#:normal-text #:small #:italic "decresc."))
 )
 
 
 
 smallGroupDistance = {
-	\override StaffGrouper.staffgroup-staff-spacing =
-		#'((basic-distance . 12)
-			 (minimum-distance . 12)
-			 (padding . -100)
-			 (stretchability . 0))
-	\override StaffGrouper.staff-staff-spacing =
-		#'((basic-distance . 12)
+  \override StaffGrouper.staffgroup-staff-spacing =
+    #'((basic-distance . 12)
        (minimum-distance . 12)
        (padding . -100)
-			 (stretchability . 0)) }
+       (stretchability . 0))
+  \override StaffGrouper.staff-staff-spacing =
+    #'((basic-distance . 12)
+       (minimum-distance . 12)
+       (padding . -100)
+       (stretchability . 0)) }
 
 normalGroupDistance = {
- 	\override StaffGrouper.staffgroup-staff-spacing =
- 		#'((basic-distance . 15)
- 			 (minimum-distance . 15)
- 			 (padding . -100)
- 			 (stretchability . 0))
- 	\override StaffGrouper.staff-staff-spacing =
- 		#'((basic-distance . 12)
-        (minimum-distance . 12)
-        (padding . -100)
- 			 (stretchability . 0)) }
+  \override StaffGrouper.staffgroup-staff-spacing =
+    #'((basic-distance . 15)
+       (minimum-distance . 15)
+       (padding . -100)
+       (stretchability . 0))
+  \override StaffGrouper.staff-staff-spacing =
+    #'((basic-distance . 12)
+       (minimum-distance . 12)
+       (padding . -100)
+       (stretchability . 0)) }
 
 smallStaffDistance = {
- 	\override VerticalAxisGroup.staff-staff-spacing =
- 		#'((basic-distance . 12)
- 			 (minimum-distance . 12)
- 			 (padding . -100)
- 			 (stretchability . 0))
+  \override VerticalAxisGroup.staff-staff-spacing =
+    #'((basic-distance . 12)
+       (minimum-distance . 12)
+       (padding . -100)
+       (stretchability . 0))
 }
 
 twofourtime = {
-	\overrideTimeSignatureSettings
-		2/4
-		1/8
-		#'(4)
-		#'((end . (((1 . 16) . (4 4)))))
-	}
+  \overrideTimeSignatureSettings
+    2/4
+    1/8
+    #'(4)
+    #'((end . (((1 . 16) . (4 4)))))
+  }
+
+twotwotime = {
+  \overrideTimeSignatureSettings
+    2/2
+    1/4
+    #'(4)
+    #'((end . (((1 . 16) . (4 4 4 4)) ((1 . 8) . (4 4)))))
+  }
 
 mvTr = \once \override TextScript.X-offset = #2
 mvTrh = \once \override TextScript.X-offset = #2.5
@@ -329,36 +332,41 @@ mvTrr = \once \override TextScript.X-offset = #3
 hideTn = \once \override TupletNumber.stencil = ##f
 mvDll = \once \override DynamicText.X-offset = #-3
 scriptOut = \once \override Script.avoid-slur = #'outside
-pao = \partcombineApartOnce
-pa = \partcombineApart
-pd = \partcombineAutomatic
+pao = \once \partCombineApart
+pa = \partCombineApart
+pd = \partCombineAutomatic
 hairpinDashed = \override Hairpin.style = #'dashed-line
 hairpinSolid = \override Hairpin.style = #'solid
 
 sbOn = {
-	\set subdivideBeams = ##t
-	\set baseMoment = #(ly:make-moment 1/8)
-	\set beatStructure = #'(2 2 2 2)
+  \set subdivideBeams = ##t
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(2 2 2 2)
 }
 sbOff = {
-	\unset subdivideBeams
-	\unset baseMoment
-	\unset beatStructure
+  \unset subdivideBeams
+  \unset baseMoment
+  \unset beatStructure
 }
 
 parOn = {
-	\once \override ParenthesesItem.font-size = #-3
-	\once \override ParenthesesItem.stencils = #(lambda (grob)
-		(let ((par-list (parentheses-item::calc-parenthesis-stencils grob))
-					(right-par (grob-interpret-markup grob (markup #:null))))
-	     (list (car par-list) right-par )))
+  \once \override ParenthesesItem.font-size = #-3
+  \once \override ParenthesesItem.stencils = #(lambda (grob)
+    (let ((par-list (parentheses-item::calc-parenthesis-stencils grob))
+          (right-par (grob-interpret-markup grob (markup #:null))))
+      (list (car par-list) right-par )))
 }
 parOff = {
-	\once \override ParenthesesItem.font-size = #-3
-	\once \override ParenthesesItem.stencils = #(lambda (grob)
-		(let ((par-list (parentheses-item::calc-parenthesis-stencils grob))
-					(left-par (grob-interpret-markup grob (markup #:null))))
-			(list left-par (cadr par-list))))
+  \once \override ParenthesesItem.font-size = #-3
+  \once \override ParenthesesItem.stencils = #(lambda (grob)
+    (let ((par-list (parentheses-item::calc-parenthesis-stencils grob))
+          (left-par (grob-interpret-markup grob (markup #:null))))
+      (list left-par (cadr par-list))))
+}
+
+markDaCapo = {
+  \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \mark \markup { \remark "da capo" }
 }
 
 
@@ -402,7 +410,7 @@ parOff = {
     (if (and (not fig-markup) alt-markup)
         (begin
           (set! fig-markup
-						(markup #:left-align #:pad-around 0.3 alt-markup))
+            (markup #:left-align #:pad-around 0.3 alt-markup))
           (set! alt-markup #f)))
 
     (if alt-markup
@@ -463,104 +471,104 @@ bc =
 
 
 \layout {
-	\context {
-		\Score
-		\compressFullBarRests
-		% \override BarNumber.break-visibility = #'#(#f #t #t)
-	}
-	\context {
-		\StaffGroup
-		\override SystemStartBracket.collapse-height = #1
-		\override InstrumentName.font-shape = #'italic
-		\override StaffGrouper.staffgroup-staff-spacing =
-		  #'((basic-distance . 15)
-         (minimum-distance . 15)
-         (padding . -100)
-         (stretchability . 0))
-		\override StaffGrouper.staff-staff-spacing =
-		  #'((basic-distance . 12)
-         (minimum-distance . 12)
-         (padding . -100)
-         (stretchability . 0))
-	}
-	\context {
-		\ChoirStaff
-		\override StaffGrouper.staffgroup-staff-spacing =
-		  #'((basic-distance . 15)
-         (minimum-distance . 15)
-         (padding . -100)
-         (stretchability . 0))
-		\override StaffGrouper.staff-staff-spacing =
-		  #'((basic-distance . 13)
-         (minimum-distance . 13)
-         (padding . -100)
-         (stretchability . 0))
-		\override StaffGrouper.nonstaff-nonstaff-spacing =
-		  #'((basic-distance . 2)
-         (minimum-distance . 2)
-         (padding . -100)
-         (stretchability . 0))
-	}
-	\context {
-		\GrandStaff
-		\override InstrumentName.font-shape = #'italic
-		\override StaffGrouper.staffgroup-staff-spacing =
-		  #'((basic-distance . 15)
-         (minimum-distance . 15)
-         (padding . -100)
-         (stretchability . 0))
-		\override StaffGrouper.staff-staff-spacing =
-		  #'((basic-distance . 12)
-         (minimum-distance . 12)
-         (padding . -100)
-         (stretchability . 0))
-	}
-	\context {
-		\PianoStaff
-		\override InstrumentName.font-shape = #'italic
-		\override StaffGrouper.staffgroup-staff-spacing =
-		  #'((basic-distance . 15)
-         (minimum-distance . 15)
-         (padding . -100)
-         (stretchability . 0))
-		\override StaffGrouper.staff-staff-spacing =
-		  #'((basic-distance . 12)
-         (minimum-distance . 12)
-         (padding . -100)
-         (stretchability . 0))
-	}
-	\context {
-		\Staff
-		\override InstrumentName.font-shape = #'italic
-		\override VerticalAxisGroup.default-staff-staff-spacing =
+  \context {
+    \Score
+    \compressEmptyMeasures
+    % \override BarNumber.break-visibility = #'#(#f #t #t)
+  }
+  \context {
+    \StaffGroup
+    \override SystemStartBracket.collapse-height = #1
+    \override InstrumentName.font-shape = #'italic
+    \override StaffGrouper.staffgroup-staff-spacing =
       #'((basic-distance . 15)
          (minimum-distance . 15)
          (padding . -100)
-				 (stretchability . 0))
-		\accidentalStyle neo-modern-voice
-		extraNatural = ##t
-		\override NoteHead.style = #'baroque
-		aDueText = \markup { \medium \remark "a 2" }
-		\override DynamicTextSpanner.style = #'none
-	}
-	\context {
-		\Voice
-		\override TupletBracket.bracket-visibility = ##f
-		\override TupletBracket.avoid-scripts = ##f
-	}
-	\context {
-		\Lyrics
-		\override LyricText.font-size = #-1
-		\override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #-100
-	}
-	\context {
-		\FiguredBass
-		figuredBassPlusDirection = #1
-		\override BassFigure.font-size = #-2
-		\override BassFigure.baseline-skip = #-3
-		\override VerticalAxisGroup.nonstaff-nonstaff-spacing.padding = #-100
-	}
-	\set figuredBassFormatter = #new-format-bass-figure
+         (stretchability . 0))
+    \override StaffGrouper.staff-staff-spacing =
+      #'((basic-distance . 12)
+         (minimum-distance . 12)
+         (padding . -100)
+         (stretchability . 0))
+  }
+  \context {
+    \ChoirStaff
+    \override StaffGrouper.staffgroup-staff-spacing =
+      #'((basic-distance . 15)
+         (minimum-distance . 15)
+         (padding . -100)
+         (stretchability . 0))
+    \override StaffGrouper.staff-staff-spacing =
+      #'((basic-distance . 13)
+         (minimum-distance . 13)
+         (padding . -100)
+         (stretchability . 0))
+    \override StaffGrouper.nonstaff-nonstaff-spacing =
+      #'((basic-distance . 2)
+         (minimum-distance . 2)
+         (padding . -100)
+         (stretchability . 0))
+  }
+  \context {
+    \GrandStaff
+    \override InstrumentName.font-shape = #'italic
+    \override StaffGrouper.staffgroup-staff-spacing =
+      #'((basic-distance . 15)
+         (minimum-distance . 15)
+         (padding . -100)
+         (stretchability . 0))
+    \override StaffGrouper.staff-staff-spacing =
+      #'((basic-distance . 12)
+         (minimum-distance . 12)
+         (padding . -100)
+         (stretchability . 0))
+  }
+  \context {
+    \PianoStaff
+    \override InstrumentName.font-shape = #'italic
+    \override StaffGrouper.staffgroup-staff-spacing =
+      #'((basic-distance . 15)
+         (minimum-distance . 15)
+         (padding . -100)
+         (stretchability . 0))
+    \override StaffGrouper.staff-staff-spacing =
+      #'((basic-distance . 12)
+         (minimum-distance . 12)
+         (padding . -100)
+         (stretchability . 0))
+  }
+  \context {
+    \Staff
+    \override InstrumentName.font-shape = #'italic
+    \override VerticalAxisGroup.default-staff-staff-spacing =
+      #'((basic-distance . 15)
+         (minimum-distance . 15)
+         (padding . -100)
+         (stretchability . 0))
+    \accidentalStyle neo-modern-voice
+    extraNatural = ##t
+    \override NoteHead.style = #'baroque
+    aDueText = \markup { \medium \remark "a 2" }
+    \override DynamicTextSpanner.style = #'none
+  }
+  \context {
+    \Voice
+    \override TupletBracket.bracket-visibility = ##f
+    \override TupletBracket.avoid-scripts = ##f
+  }
+  \context {
+    \Lyrics
+    \override LyricText.font-size = #-1
+    \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #-100
+  }
+  \context {
+    \FiguredBass
+    figuredBassPlusDirection = #1
+    \override BassFigure.font-size = #-2
+    \override BassFigure.baseline-skip = #-3
+    \override VerticalAxisGroup.nonstaff-nonstaff-spacing.padding = #-100
+  }
+  \set figuredBassFormatter = #new-format-bass-figure
 }
 
 #(define (ly:create-toc-file layout pages)
@@ -568,14 +576,14 @@ bc =
     (if (not (null? label-table))
       (let* ((format-line (lambda (toc-item)
              (let* ((label (car toc-item))
-                    (text  (caddr toc-item))
+                    (text  (cdaddr toc-item))
                     (label-page (and (list? label-table)
                                      (assoc label label-table)))
                     (page (and label-page (cdr label-page))))
                (format #f "~a{~a}" text page))))
              (formatted-toc-items (map format-line (toc-items)))
              (whole-string (string-join formatted-toc-items "\n"))
-						 (outfilename "lilypond.toc")
+             (outfilename "lilypond.toc")
              (outfile (open-output-file outfilename)))
         (if (output-port? outfile)
             (display whole-string outfile)
@@ -583,45 +591,45 @@ bc =
         (close-output-port outfile)))))
 
 tocPart = #(define-music-function
-	(parser location number text)
-	(markup? markup?)
+  (parser location number text)
+  (markup? markup?)
   (add-toc-item!
-		'tocItemMarkup
-		(format
-			#f
-			"\\contentsline {part}{\\numberline {~a}~a}"
-			number
-			text
-		)
-	)
+    'tocItemMarkup
+    (format
+      #f
+      "\\contentsline {part}{\\numberline {~a}~a}"
+      number
+      text
+    )
+  )
 )
 
 tocSection = #(define-music-function
-	(parser location number text)
-	(markup? markup?)
+  (parser location number text)
+  (markup? markup?)
   (add-toc-item!
-		'tocItemMarkup
-		(format
-			#f
-			"\\contentsline {section}{\\numberline {~a}~a}"
-			number
-			text
-		)
-	)
+    'tocItemMarkup
+    (format
+      #f
+      "\\contentsline {section}{\\numberline {~a}~a}"
+      number
+      text
+    )
+  )
 )
 
 tocSubsection = #(define-music-function
-	(parser location number text)
-	(markup? markup?)
+  (parser location number text)
+  (markup? markup?)
   (add-toc-item!
-		'tocItemMarkup
-		(format
-			#f
-			"\\contentsline {subsection}{\\numberline {~a}~a}"
-			number
-			text
-		)
-	)
+    'tocItemMarkup
+    (format
+      #f
+      "\\contentsline {subsection}{\\numberline {~a}~a}"
+      number
+      text
+    )
+  )
 )
 
 #(define (ly:create-ref-file layout pages)
@@ -629,14 +637,14 @@ tocSubsection = #(define-music-function
    (if (not (null? label-table))
      (let* ((format-line (lambda (toc-item)
             (let* ((label (car toc-item))
-                   (text  (caddr toc-item))
+                   (text  (cdaddr toc-item))
                    (label-page (and (list? label-table)
                                     (assoc label label-table)))
                    (page (and label-page (cdr label-page))))
               (format #f "~a{~a}}" text page))))
             (formatted-toc-items (map format-line (toc-items)))
             (whole-string (string-join formatted-toc-items "\n"))
-						(outfilename "lilypond.ref")
+            (outfilename "lilypond.ref")
             (outfile (open-output-file outfilename)))
        (if (output-port? outfile)
            (display whole-string outfile)
@@ -644,20 +652,35 @@ tocSubsection = #(define-music-function
        (close-output-port outfile)))))
 
 tocLabel = #(define-music-function
- 	(parser location label number text)
- 	(markup? markup? markup?)
+  (parser location label number text)
+  (markup? markup? markup?)
    (add-toc-item!
- 		'tocItemMarkup
- 		(format
- 			#f
- 			"\\newlabel{~a}{{~a}{~a}"
-			label
- 			number
- 			text
- 		)
- 	)
- )
+    'tocItemMarkup
+    (format
+      #f
+      "\\newlabel{~a}{{~a}{~a}"
+      label
+      number
+      text
+    )
+  )
+)
 
+tocLabelLong = #(define-music-function
+  (parser location label number genre text)
+  (markup? markup? markup? markup?)
+  (add-toc-item!
+    'tocItemMarkup
+    (format
+      #f
+      "\\newlabel{~a}{{~a}{~a}{~a}"
+      label
+    number
+    genre
+    text
+    )
+  )
+)
 
 
 tempoKyrie = \tempoMarkup "Andante"

@@ -1,8 +1,4 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 
 TenoreIncipit = \markup {
 	"Tenore" \hspace #-18.2 \score {
@@ -101,7 +97,7 @@ DomineTenoreNotes = {
 		a16[ gis a h] a[ c h a] h[ a h c] h[ d c h]
 		c8 h16([ a)] a8([ gis)] a4 r %100
 		R1*9 %109
-		R1\fermataMarkup \bar "||" %110 finis
+		R1\fermata \bar "||" %110 finis
 	}
 }
 
@@ -195,7 +191,7 @@ CumSanctoTenoreNotes = {
 		d g, g2
 		g4 r r2
 		R1 %190
-		R\fermataMarkup \bar "|." %191 FINIS
+		R\fermata \bar "|." %191 FINIS
 	}
 }
 
