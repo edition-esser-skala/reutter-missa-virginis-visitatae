@@ -1,10 +1,10 @@
 \version "2.22.0"
 
 GratiasTrombone = {
-	\relative c' {
-		\clef alto
-		\key e \minor \time 3/4 \tempoGratias
-			\set Score.currentBarNumber = #46
+  \relative c' {
+    \clef alto
+    \key e \minor \time 3/4 \tempoGratias
+      \set Score.currentBarNumber = #46
     R2.*3 %48
     \mvTr e4.\fE-\solo h8 h4
     g'4 fis e %50
@@ -31,5 +31,5 @@ GratiasTrombone = {
     dis2.
     e4 e dis
     e2.\fermata \bar "||"
-	}
+  }
 }

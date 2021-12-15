@@ -1,17 +1,18 @@
-composer: Reutter der Jüngere, Georg
-title: Missa Virginis Visitatae
+composer:
+  last: Reutter
+  suffix: der Jüngere
+  first: Georg
+title: Missa Virginis Visitatæ
+subtitle: Kyrie and Gloria
 id: HofR 19/36
 genre: mass
-scoring: S, A, T, B (solo), S, A, T, B (coro), 2 clno (C), timp (C–G), a-trb, 2 vl, b, org
+scoring: S, A, T, B (solo), S, A, T, B (coro), 2 clno (C), a-trb, timp (C–G), 2 vl, b, org
+license: cc-by-sa-4.0
 sources:
-  1:
+  B1:
     siglum: A-Ed
     shelfmark: A 85
-    type: manuscript copy
-    date: unknown
     rism: 600037884
-    url: http://dommusikarchiv.martinus.at/site/werkverzeichnis/gallery/735.html
-github: reutter-missa-virginis-visitatae
-imslp: 
-notes: only Kyrie and Gloria
-
+    url: https://dommusikarchiv.martinus.at/site/werkverzeichnis/gallery/735.html
+    license: public domain
+    principal: true
